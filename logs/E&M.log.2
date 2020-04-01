@@ -1,0 +1,105 @@
+2020-03-22 19:23:44,366 INFO: E & M startup [in /home/lean/Documents/E&M/app/__init__.py:50]
+2020-03-22 19:28:57,161 INFO: E & M startup [in /home/lean/Documents/E&M/app/__init__.py:50]
+2020-03-22 19:29:09,044 ERROR: Exception on /inde [GET] [in /home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 1799, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "/home/lean/Documents/E&M/app/errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lean/Documents/E&M/app/templates/404.html", line 2, in top-level template code
+    {% include "nav_section.html" %}
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/lean/Documents/E&M/app/templates/404.html", line 15, in root
+  File "/home/lean/Documents/E&M/app/templates/nav_section.html", line 52, in root
+    {% endif %}
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/filters.py", line 668, in do_float
+    return float(value)
+jinja2.exceptions.UndefinedError: 'total' is undefined
+2020-03-22 19:29:39,585 INFO: E & M startup [in /home/lean/Documents/E&M/app/__init__.py:50]
+2020-03-22 19:34:58,753 INFO: E & M startup [in /home/lean/Documents/E&M/app/__init__.py:50]
+2020-03-22 19:35:47,077 INFO: E & M startup [in /home/lean/Documents/E&M/app/__init__.py:50]
+2020-03-22 19:36:10,857 INFO: E & M startup [in /home/lean/Documents/E&M/app/__init__.py:50]
+2020-03-22 19:36:23,002 ERROR: Exception on /inde [GET] [in /home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 1799, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "/home/lean/Documents/E&M/app/errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lean/Documents/E&M/app/templates/404.html", line 2, in top-level template code
+    {% include "nav_section.html" %}
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/lean/Documents/E&M/app/templates/404.html", line 15, in root
+    </div>
+  File "/home/lean/Documents/E&M/app/templates/nav_section.html", line 52, in root
+    {% endif %}
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/filters.py", line 668, in do_float
+    return float(value)
+jinja2.exceptions.UndefinedError: 'total' is undefined

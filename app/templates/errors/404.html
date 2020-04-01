@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container-fluid padding">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <img src="static/img/logo completo.png">
+            </div>
+            <hr>
+            <div class="col-12">
+                <h1>File Not Found</h1>
+                <a href="{{ url_for('shop.index') }}"><button type="button" class="btn btn-primary">Back</button></a>
+            </div>
+        </div>
+    </div>
+
+{% include "footer_section.html" %}
+{% endblock %}
+

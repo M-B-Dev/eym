@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block header %}
+{% include "nav_section.html" %}
+{% endblock %}
+{% block content %}
+    <div class="container-fluid padding">
+        <h1>Reports Section</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %} 
+                        <div class='alert alert-danger'>{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            {% if current_user.is_authenticated %}
+                {% with tasks = current_user.get_tasks_in_progress() %}
+                    {% if tasks %}
+                        {% for task in tasks %}
+                        <span id="notif">
+                            <div class="alert alert-warning" role="alert">
+                                {{ task.description }}
+                                <span id="{{ task.id }}-progress">{{ task.get_progress() }}</span>%
+                            </div>
+                        </span>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            {% endif %}
+                <div class="card mb-3 animated fadeIn shadow-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"></h4>
+                            <form action="" method="post" enctype="multipart/form-data">
+                                {{ form.hidden_tag() }}
+                                <fieldset class="form-group">
+                                    <div class="form-group">
+                                        {{ form.users.label(class="form-control-label") }}
+                                        {% if form.users.errors %}
+                                            {{ form.users(class="form-control form-control-lg is-invalid") }}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.users.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.users(class="custom-select form-control-lg") }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.products.label(class="form-control-label") }}
+                                        {% if form.products.errors %}
+                                            {{ form.products(class="form-control form-control-lg is-invalid") }}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.products.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.products(class="custom-select multiple form-control-lg") }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.frm.label(class="form-control-label") }}
+                                        {% if form.frm.errors %}
+                                            {{ form.frm(class="form-control form-control-lg is-invalid") }}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.frm.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.frm(class="form-control form-control-lg", id="date", type="date") }}
+                                        {% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.to.label(class="form-control-label") }}
+                                        {% if form.to.errors %}
+                                            {{ form.to(class="form-control form-control-lg is-invalid") }}
+                                            <div class="invalid-feedback">
+                                                {% for error in form.to.errors %}
+                                                    <span>{{ error }}</span>
+                                                {% endfor %}
+                                            </div>
+                                        {% else %}
+                                            {{ form.to(class="form-control form-control-lg", id="date", type="date") }}
+                                        {% endif %}
+                                    </div>
+                                </fieldset>
+                                <p>{{form.submit(class="btn btn-primary")}}</p>
+                            </form>     
+                        </div>
+                    </div>
+                </div>
+            <p><a href="{{ url_for('admin.admin') }}"><button type="button" class="btn btn-primary">Back to admin</button></a></p>
+        </div>
+        <hr class="may-4"> 
+    </div> 
+
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="static/js/notifications.js"></script> 
+{% endblock %}     

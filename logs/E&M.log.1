@@ -1,0 +1,144 @@
+2020-03-22 19:36:40,542 ERROR: Exception on /favicon.ico [GET] [in /home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/werkzeug/routing.py", line 1799, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "/home/lean/Documents/E&M/app/errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
+    ctx.app,
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "/home/lean/Documents/E&M/app/templates/404.html", line 2, in top-level template code
+    {% include "nav_section.html" %}
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "/home/lean/Documents/E&M/app/templates/404.html", line 15, in root
+    </div>
+  File "/home/lean/Documents/E&M/app/templates/nav_section.html", line 52, in root
+    {% endif %}
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/jinja2/filters.py", line 668, in do_float
+    return float(value)
+jinja2.exceptions.UndefinedError: 'total' is undefined
+2020-03-22 19:37:04,788 INFO: E & M startup [in /home/lean/Documents/E&M/app/__init__.py:50]
+2020-03-24 17:31:02,284 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:34:55,151 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:34:55,759 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:34:56,244 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:34:56,731 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:34:57,245 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:34:57,768 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:36:55,739 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:37:32,600 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:37:43,150 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 17:37:53,250 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:32:06,687 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:32:58,873 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:38:02,097 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:38:42,101 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:42:57,979 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:43:02,992 ERROR: Unhandled exception [in ./app/tasks.py:34]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 30, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/admin/routes.py", line 108, in generate_async_report
+    print(orders.buyer.email)
+AttributeError: 'NoneType' object has no attribute 'buyer'
+2020-03-24 18:44:39,792 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:47:40,119 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:47:46,223 ERROR: Unhandled exception [in ./app/tasks.py:34]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 30, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/admin/routes.py", line 111, in generate_async_report
+    order.buyer.email,
+AttributeError: 'NoneType' object has no attribute 'buyer'
+2020-03-24 18:49:06,928 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:49:24,751 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 18:49:54,538 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:09:49,843 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:11:09,476 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:13:36,079 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:16:17,109 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:19:48,730 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:20:46,153 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:21:59,369 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:30:51,548 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:33:34,773 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 19:34:26,811 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:25:33,670 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:29:11,245 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:34:36,319 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:35:03,334 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:35:58,483 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:36:32,629 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:39:04,013 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:39:09,525 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:39:14,659 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:45:29,378 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:45:41,547 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:54:20,378 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 21:56:48,781 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:03:40,353 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:10:44,964 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:11:35,452 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:12:51,262 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:13:34,742 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:14:50,643 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:16:12,417 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:19:15,966 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:20:58,378 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:25:19,521 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:27:26,300 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:29:47,192 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:30:56,655 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:32:04,427 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:34:59,390 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 22:35:25,952 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:18:42,652 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:19:56,073 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:21:20,500 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:22:20,449 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:22:53,872 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:25:58,412 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:28:37,929 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:49:58,469 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:51:07,125 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-24 23:51:39,123 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-25 01:42:16,066 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-25 14:11:43,197 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-25 14:19:58,288 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-25 14:22:55,764 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-25 14:25:20,586 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-25 14:25:45,126 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 18:14:41,918 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 18:19:02,961 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 18:20:14,609 INFO: E & M startup [in ./app/__init__.py:72]

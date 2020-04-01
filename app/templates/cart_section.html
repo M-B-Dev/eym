@@ -1,0 +1,32 @@
+
+<!--- Cart Modal -->
+<div id="cartModal" class="myModal">
+  <!-- cart -->
+  <div id="cart" class="cart">
+    <span id="items-cart">
+      {% for item in items %}
+        <div class='cart-item d-flex justify-content-between text-capitalize my-3'>
+          <img src="static/img-cart/{{item[2]}}" class="img-fluid rounded-circle responsive" id="item-img" alt="">
+          <div class="item-text">
+            <p id="cart-item-title" class="font-weight-bold mb-0">{{item[1]}}</p>
+            <span id="cart-item-price" class="cart-item-price" class="mb-0">Price: ${{'%0.2f'| format(item[0]|float)}} | </span>
+            <span id="cart-item-price" class="cart-item-price" class="mb-0">Quantity: {{item[4]}}</span>
+          </div>
+          <a href="#" id='trash-{{loop.index}}' class="cart-item-remove">
+            <i class="fas fa-trash"></i>
+          </a>
+        </div>
+      {% endfor %}
+    </span>
+
+    <!-- cart total -->
+    <span id="buttons-cart">
+      <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+        <h2>total</h2>
+        <h2>  
+          <strong id="cart-total" class="font-weight-bold">${{('%0.2f'| format(total|float))*1}}</strong> 
+        </h2>
+      </div>
+    </span>
+  </div>
+</div>

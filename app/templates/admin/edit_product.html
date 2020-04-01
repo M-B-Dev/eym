@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block header %}
+{% include "nav_section.html" %}
+{% endblock %}
+{% block content %}
+    <div class="container-fluid padding">
+        <div class="row welcome text-left">
+            <div class="col-12">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div class='alert alert-success'>{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <h1>Edit Product</h1>
+                <div class="row padding" class="store-items" id="boxes">
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item chrsitmas">
+                        <div class="card">
+                            <div class="img-container">
+                                <img class="card-img-top" src="static/img/{{ product.image_file }}">
+                            </div>
+                        </div>
+                        <div class="form-control-label">Main Image</div>
+                    </div>
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item chrsitmas">
+                    <div class="card">
+                        <div class="img-container">
+                            <img class="card-img-top" src="static/img/{{ product.back_image_file }}">
+                        </div>
+                    </div>
+                    <div class="form-control-label">Description Image</div>
+                    </div> 
+                </div>    
+                <form action="" method="post" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <div class="form-group">
+                            {{ form.item.label(class="form-control-label") }}
+                            {% if form.item.errors %}
+                                {{ form.item(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.item.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.item(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.qty.label(class="form-control-label") }}
+                            {% if form.qty.errors %}
+                                {{ form.qty(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.qty.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.qty(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.price.label(class="form-control-label") }}
+                            {% if form.price.errors %}
+                                {{ form.price(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.price.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.price(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.cat.label(class="form-control-label") }}
+                            {% if form.cat.errors %}
+                                {{ form.cat(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.cat.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.cat(class="form-control custom-select multiple form-control-lg",  placeholder="{{product.cat}}") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.description.label(class="form-control-label") }}
+                            {% if form.description.errors %}
+                                {{ form.description(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.description.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.description(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.image_file.label(class="form-control-label") }}
+                            {% if form.image_file.errors %}
+                                {{ form.image_file(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.image_file.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.image_file(class="form-control form-control-lg", placeholder="{{product.image_file}}") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
+                            {{ form.back_image_file.label(class="form-control-label") }}
+                            {% if form.back_image_file.errors %}
+                                {{ form.back_image_file(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.back_image_file.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.back_image_file(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                    </fieldset>
+                    <p>{{form.submit(class="btn btn-primary")}}</p>
+                    <p><a href="{{ url_for('admin.products') }}"><button type="button" class="btn btn-secondary">Back to products</button></a></p>
+                </form>
+            </div>
+            <p><a href="{{ url_for('admin.delete_product', product_id=product_id)}}"><button type="button" class="btn btn-danger">DELETE THIS PRODUCT</button></a>
+        </div>
+    </div>
+{% endblock %}
+

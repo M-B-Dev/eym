@@ -1,0 +1,101 @@
+2020-03-26 18:20:20,978 ERROR: Unhandled exception [in ./app/tasks.py:42]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 38, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/tasks.py", line 78, in generate_async_report
+    _set_task_progress(100 * i//len(user))
+TypeError: object of type 'User' has no len()
+2020-03-26 18:25:20,346 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 18:25:28,182 ERROR: Unhandled exception [in ./app/tasks.py:42]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 38, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/tasks.py", line 69, in generate_async_report
+    row = sheet_update(
+NameError: name 'sheet_update' is not defined
+2020-03-26 19:21:58,114 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 19:22:03,282 ERROR: Unhandled exception [in ./app/tasks.py:42]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 38, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/tasks.py", line 78, in generate_async_report
+    _set_task_progress(100 * i//len(user))
+TypeError: object of type 'User' has no len()
+2020-03-26 19:28:38,930 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 19:29:34,683 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 19:31:31,508 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 19:38:51,012 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-26 19:39:42,185 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 02:34:35,194 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 02:36:18,827 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 02:37:10,382 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 02:40:23,580 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 02:42:18,737 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 02:44:20,394 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 02:46:09,240 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 13:44:54,040 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 23:54:00,685 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 23:55:04,121 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-28 23:57:22,012 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-29 00:09:46,888 INFO: E & M startup [in ./app/__init__.py:72]
+2020-03-31 22:07:13,730 INFO: E & M startup [in ./app/__init__.py:75]
+2020-03-31 22:07:46,823 ERROR: Unhandled exception [in ./app/tasks.py:49]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 45, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/tasks.py", line 88, in generate_async_report
+    sheet.share(app.config['ADMINS'], perm_type='user', role='writer')
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/models.py", line 448, in share
+    with_link=with_link
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/client.py", line 426, in insert_permission
+    params=params
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/client.py", line 79, in request
+    raise APIError(response)
+gspread.exceptions.APIError: {'errors': [{'domain': 'global', 'reason': 'required', 'message': 'Permission value field required', 'locationType': 'other', 'location': 'permission.value'}], 'code': 400, 'message': 'Permission value field required'}
+2020-03-31 22:08:22,999 INFO: E & M startup [in ./app/__init__.py:75]
+2020-03-31 22:08:46,898 ERROR: Unhandled exception [in ./app/tasks.py:49]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 45, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/tasks.py", line 83, in generate_async_report
+    sheet
+  File "./app/tasks.py", line 97, in sheet_update
+    worksheet.update_cell(row, 2, product)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/models.py", line 815, in update_cell
+    'values': [[value]]
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/models.py", line 234, in values_update
+    r = self.client.request('put', url, params=params, json=body)
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/client.py", line 79, in request
+    raise APIError(response)
+gspread.exceptions.APIError: {'code': 429, 'message': "Quota exceeded for quota group 'WriteGroup' and limit 'Write requests per user per 100 seconds' of service 'sheets.googleapis.com' for consumer 'project_number:926009893060'.", 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Google developer console API key', 'url': 'https://console.developers.google.com/project/926009893060/apiui/credential'}]}]}
+2020-03-31 22:12:54,504 INFO: E & M startup [in ./app/__init__.py:75]
+2020-03-31 22:13:26,583 ERROR: Unhandled exception [in ./app/tasks.py:49]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 45, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/tasks.py", line 88, in generate_async_report
+    sheet.share(app.config['ADMINS'], perm_type='user', role='writer')
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/models.py", line 448, in share
+    with_link=with_link
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/client.py", line 426, in insert_permission
+    params=params
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/client.py", line 79, in request
+    raise APIError(response)
+gspread.exceptions.APIError: {'errors': [{'domain': 'global', 'reason': 'required', 'message': 'Permission value field required', 'locationType': 'other', 'location': 'permission.value'}], 'code': 400, 'message': 'Permission value field required'}
+2020-03-31 22:29:07,384 INFO: E & M startup [in ./app/__init__.py:75]
+2020-03-31 22:29:38,876 ERROR: Unhandled exception [in ./app/tasks.py:65]
+Traceback (most recent call last):
+  File "./app/tasks.py", line 61, in export_report
+    complete = generate_async_report(users, products, to, frm)
+  File "./app/tasks.py", line 104, in generate_async_report
+    sheet.share(app.config['ADMINS'], perm_type='user', role='writer')
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/models.py", line 448, in share
+    with_link=with_link
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/client.py", line 426, in insert_permission
+    params=params
+  File "/home/lean/Documents/E&M/venv/lib/python3.7/site-packages/gspread/client.py", line 79, in request
+    raise APIError(response)
+gspread.exceptions.APIError: {'errors': [{'domain': 'global', 'reason': 'required', 'message': 'Permission value field required', 'locationType': 'other', 'location': 'permission.value'}], 'code': 400, 'message': 'Permission value field required'}
+2020-03-31 22:32:19,320 INFO: E & M startup [in ./app/__init__.py:75]
+2020-03-31 22:50:03,954 INFO: E & M startup [in ./app/__init__.py:75]
+2020-04-01 13:07:09,569 INFO: E & M startup [in ./app/__init__.py:75]

@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block header %}
+{% include "nav_section.html" %}
+{% endblock %}
+{% block content %}
+
+<!-- messages -->
+    <div class="container-fluid padding">
+        <div class="row welcome text-left">
+            <div class="col-12">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %} 
+                            <div class='alert alert-success'>{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <h1>Products Section</h1>
+                <p><a href="{{ url_for('admin.new_product') }}"><button type="button" class="btn btn-primary">New Product</button></a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Themed box section -->
+    <div class="container-fluid padding">
+        <h2>Themed Boxes</h2>
+        <div class="row padding" class="store-items" id="store">
+            {% for product in products %}
+                {% if product.cat == "Box" %}
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item chrsitmas">
+                        <div class="card">
+                            <div class="img-container">
+                                <img class="card-img-top" src="static/img/{{ product.image_file }}">
+                            </div>  
+                            <div class="card-body">
+                                <h4 class="card-title">Name: {{product.item}}</h4>
+                                <p class="card-text">Price: ${{'%0.2f'| format(product.price|float)}}</p>
+                                <p>Quantity: {{ product.qty }}</p>
+                                <p>Category: {{ product.cat }}</p>
+                                <p>Decription: {{ product.description }}</p>
+                                <a href="{{ url_for('admin.product_users', product_id=product.id)}}">
+                                    <button type="button" class="btn btn-primary">user who bought {{ product.item }}</button>
+                                </a>
+                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">Edit {{product.item}}</button></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <hr class="may-4">
+    </div>
+
+    <!-- Empty Boc Section-->
+    <div class="container-fluid padding">
+        <h2>Empty Boxes</h2>
+        <div class="row padding" class="store-items" id="store">
+            {% for product in products %}
+                {% if product.cat == "Empty Box" %}
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item chrsitmas">
+                        <div class="card">
+                            <div class="img-container">
+                                <img class="card-img-top" src="static/img/{{ product.image_file }}">
+                            </div>  
+                            <div class="card-body">
+                                <h4 class="card-title">Name: {{product.item}}</h4>
+                                <p class="card-text">Price: ${{'%0.2f'| format(product.price|float)}}</p>
+                                <p>Quantity: {{ product.qty }}</p>
+                                <p>Category: {{ product.cat }}</p>
+                                <p>Decription: {{ product.description }}</p>
+                                <a href="{{ url_for('admin.product_users', product_id=product.id)}}">
+                                    <button type="button" class="btn btn-primary">user who bought {{ product.item }}</button>
+                                </a>
+                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">Edit {{product.item}}</button></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <hr class="may-4">
+    </div>
+
+    <!-- single item section -->
+    <div class="container-fluid padding">
+        <h2>Individual Items</h2>
+        <div class="row padding" class="store-items" id="store">  
+            {% for product in products %}
+                {% if product.cat == "Item" %}
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item chrsitmas">
+                        <div class="card">
+                            <div class="img-container">
+                                <img class="card-img-top" src="static/img/{{ product.image_file }}">
+                            </div>  
+                            <div class="card-body">
+                                <h4 class="card-title">Name: {{product.item}}</h4>
+                                <p class="card-text">Price: ${{'%0.2f'| format(product.price|float)}}</p>
+                                <p>Quantity: {{ product.qty }}</p>
+                                <p>Category: {{ product.cat }}</p>
+                                <p>Decription: {{ product.description }}</p>
+                                <a href="{{ url_for('admin.product_users', product_id=product.id)}}">
+                                    <button type="button" class="btn btn-primary">user who bought {{ product.item }}</button>
+                                </a>
+                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">Edit {{product.item}}</button></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <hr class="may-4">
+    </div>
+{% endblock %}

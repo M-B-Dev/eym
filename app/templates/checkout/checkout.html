@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+{% block header %}
+{% include "cart_section.html" %}
+{% include "nav_section.html" %}
+{% endblock %}
+{% block content %}
+<div class="container-fluid padding">
+    <div class="row welcome text-left">
+        <div class="col-12">
+            <h1>Checkout</h1>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %} 
+                        <div class='alert alert-danger'>{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <form action="" method="post" enctype="multipart/form-data">
+                {{ form.hidden_tag() }}
+                <h3>Your order: </h3>
+                {% for item in user_order %}
+                    {% if item[4] %} 
+                        <div class='alert alert-danger'>{{item[4]}}</div>
+                    {% endif %}
+                    <p>{{item[3]}} x {{ item[0] }}, price: ${{'%0.2f'| format((item[1]*item[3])|float)}}</p>
+                {% endfor %}
+                <h2>Total: ${{'%0.2f'|format((user_total/100))}}</h2>
+                <p><a href="{{ url_for('checkout.checkout')}}"><button type="button" class="btn btn-warning">Update Total</button></a></p>
+                <fieldset class="form-group">
+                <div class="form-group">
+                    {{ form.name.label(class="form-control-label") }}
+                    {% if form.name.errors %}
+                        {{ form.name(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.name.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.name(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.address_1.label(class="form-control-label") }}
+                    {% if form.address_1.errors %}
+                    {{ form.address_1(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.address_1.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        {{ form.address_1(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.address_2.label(class="form-control-label") }}
+                    {% if form.address_2.errors %}
+                    {{ form.address_2(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.address_2.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        {{ form.address_2(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.address_3.label(class="form-control-label") }}
+                    {% if form.address_3.errors %}
+                    {{ form.address_3(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.address_3.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        {{ form.address_3(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.city.label(class="form-control-label") }}
+                    {% if form.city.errors %}
+                    {{ form.city(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.city.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        {{ form.city(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.province.label(class="form-control-label") }}
+                    {% if form.province.errors %}
+                    {{ form.province(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.province.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        {{ form.province(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="form-group">
+                    {{ form.postcode.label(class="form-control-label") }}
+                    {% if form.postcode.errors %}
+                    {{ form.postcode(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.postcode.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        {{ form.postcode(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                {% for message_form in form.message_details %}
+                {{ message_form.hidden_tag() }}
+                    <div class="form-group">
+                        Enter your message for {{ message_form.Gift_message.label }}
+                        {% if message_form.Gift_message.errors %}
+                            {{ message_form.Gift_message(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in message_form.Gift_message.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ message_form.Gift_message(class="form-control form-control-lg", placeholder="Enter your message here") }}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+
+                
+                {% for box_choice in form.box_choices %}
+                {{ box_choice.hidden_tag() }}
+                {% if box_count == 1 %}
+                    <span class="hide">{{ box_choice.box }}</span>
+                {% endif %}
+                {% if box_count > 1 %}
+                <div class="form-group">
+                    Choose which box you want {{ box_choice.box.label }} to go in
+                    {% if box_choice.box.errors %}
+                        {{ box_choice.box(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in box_choice.box.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ box_choice.box(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                {% endif %}
+                {% endfor %}
+                
+
+                
+
+             
+                <div class="form-group">
+                    {{ form.instructions.label(class="form-control-label") }}
+                    {% if form.instructions.errors %}
+                    {{ form.instructions(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.instructions.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    {% else %}
+                        {{ form.instructions(class="form-control form-control-lg", placeholder="Enter specical instructions here") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+
+            <p><script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="{{ pub_key }}"
+                    data-amount="{{user_total}}"
+                    data-name="Demo Site"
+                    data-description="Widget"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locale="auto">
+                </script>
+            </p>      
+            </form>
+            <a href="{{ url_for('shop.index')}}"><button type="button" class="btn btn-primary">Continue Shopping</button></a>
+
+        </div>
+        </div>
+    </div>
+
+
+{% include "footer_section.html" %}
+{% endblock %}
+

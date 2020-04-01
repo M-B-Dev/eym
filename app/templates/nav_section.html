@@ -1,0 +1,62 @@
+<!-- Navigation -->
+
+
+	<div class="container-fluid">
+		<a class="navbar-brand" href="{{url_for('shop.index')}}"><img src="static/img/navbar3.png"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="{{url_for('shop.index')}}">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{url_for('shop.index')}}#somos">Quiénes somos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{url_for('shop.index')}}#productos">Productos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{url_for('shop.index')}}#contacto">
+						<i class="fas fa-phone"></i> Contacto
+					</a>
+				</li>
+				<!-- authenticated links -->
+				{% if not current_user.is_authenticated %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{url_for('auth.login')}}">Sign in</a>
+					</li>	
+				{% else %}
+					<li class="nav-item">	
+						<a class="nav-link" href="{{url_for('auth.logout')}}">Log out</a>
+					</li>
+					{% if current_user.status != "user" %}
+						<li class="nav-item">
+							<a class="nav-link" href="{{url_for('admin.admin')}}">admin</a>
+						</li>
+					{% endif %}
+				{% endif %}
+
+				<!-- navbar cart -->
+				<div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5" >
+					<span class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
+					<p class="mb-0 text-capitalize"><span id="item-count"></span>
+						<span class="total-products">
+							{% if total_products == 1 %}
+								{{total_products}} item - $
+							{% else %}
+								{{total_products}} items - $
+							{% endif %}
+						</span>
+						<span class="item-total">
+							{% set item_total = '%0.2f'| format(total|float) %}
+							{{item_total}}
+						</span>
+					</p>
+				</div>
+			</ul>
+		</div>
+
+		
+	</div>

@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block header %}
+{% include "cart_section.html" %}
+{% include "nav_section.html" %}
+{% endblock %}
+{% block content %}
+<div class="container-fluid padding">
+    <div class="row welcome text-left">
+        <div class="col-12">
+            <div class='alert alert-success'>Thank you. Your order has been successful!</div>
+            <p>Dear {{ name }},</p>
+            <p>Your order of:</p>
+            {% set ns = namespace(total=0) %}
+            {% set index = namespace(i=0) %}
+            {% set jindex = namespace(j=0) %}
+            {% for item in user_order %}
+            <div class='alert alert-warning'> 
+                <p>{{item[3]}} x {{ item[0] }}, at ${{'%0.2f'| format(item[1]|float)}} each</p>
+                {% if item[6] == "Empty Box" or item[6] == "Box" %}
+                    {% for q in range(item[3]) %}
+                        {% if item[3] > 1 %}
+                            {% if item[6] == "Empty Box" %}
+                                <p>"{{messages[index.i]['Gift_message']}}" will be attached to {{item[0]}} {{q+1}}</p>
+                                {% set index.i = index.i + 1 %}
+                            {% elif item[6] == "Box" %}
+                                <p>"{{messages[index.i]['Gift_message']}}" will be attached to {{item[0]}} {{q+1}}</p>
+                                {% set index.i = index.i + 1 %}
+                            {% endif %}
+                        {% else %}
+                            <p>"{{messages[index.i]['Gift_message']}}" will be attached to {{item[0]}}</p>
+                            {% set index.i = index.i + 1 %}
+                        {% endif %}
+                    {% endfor %}
+                    
+                {% endif %}
+                {% if item[6] == "Item" %}
+                    {% for q in range(item[3]) %}
+                        <p>1 x {{ item[0] }} will be placed in {{choices[jindex.j]}} </p>
+                        {% set jindex.j = jindex.j + 1 %}
+                    {% endfor %}
+                {% endif %}
+                {% set ns.total = ns.total + item[3] * item[1] %}
+            </div>
+            {% endfor %}
+            <p>Total: ${{'%0.2f'| format(ns.total|float)}}</p>
+            <p>Will be delivered to:</p>
+            <p>{{name}}</p>
+            <p>{{current_user.address_1}}</p>
+            {% if current_user.address_2 %}
+                <p>{{current_user.address_2}}</p>
+            {% endif %}
+            {% if current_user.address_3 %}
+                <p>{{current_user.address_3}}</p>
+            {% endif %}
+            <p>{{current_user.city}}</p>
+            <p>{{current_user.province}}</p>
+            <p>{{current_user.post_code}}</p>
+
+            
+
+            {% if instructions %}
+                <p>With the special instructions:</p>
+                <p>{{instructions}}</p>
+            {% endif %}
+            
+
+            <p>Thank you for your order.</p>
+            <p>Sincerely,</p>
+            <p>E & M</p>
+
+            <p><a href="{{ url_for('checkout.invoice_pdf')}}" target="_blank"><button type="button" class="btn btn-warning">Download Invoice</button></a></p>
+            <a href="{{ url_for('shop.clear_session')}}"><button type="button" class="btn btn-primary">Continue Shopping</button></a>
+        </div>
+    </div>
+</div>        
+
+{% include "footer_section.html" %}
+{% endblock %}

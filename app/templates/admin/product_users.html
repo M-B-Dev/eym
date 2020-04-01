@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block header %}
+{% include "nav_section.html" %}
+{% endblock %}
+{% block content %}
+    <div class="container-fluid padding">
+        <h1>Product Users Section: {{product.item}} </h1>
+            {% for order in orders %}
+                <div class="card mb-3 animated fadeIn shadow-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">User: {{order.buyer.email}}</h4>
+                            <h4 class="card-title">Qty: {{order.qty}}</h4>
+                            <h4 class="card-title">Last ordered: {{order.timestamp.strftime('%d-%m-%y')}}</h4>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        <p><a href="{{ url_for('admin.products') }}"><button type="button" class="btn btn-primary">Back to products</button></a></p>
+        <hr class="may-4"> 
+    </div>       
+{% endblock %}
