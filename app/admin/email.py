@@ -54,10 +54,10 @@ def send_email(user_order, name, messages, instructions, choices):
         )).start()
 
 
-def feedback(message):
+def feedback(message, email):
     """This generates a user feedback email."""
     msg = Message(
-        subject=f"Feedback from {current_user.email}", 
+        subject=f"Feedback from {email}", 
         sender=current_app.config['ADMINS'][0], 
         recipients=["eymcreativa@gmail.com"]
         )

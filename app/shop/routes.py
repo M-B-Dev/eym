@@ -65,7 +65,7 @@ def index():
     if request.method == 'GET' and current_user.is_authenticated:
         form.email.data = current_user.email
     if form.validate_on_submit():
-        feedback(form.message.data)
+        feedback(form.message.data, form.email.data)
         return redirect(url_for('shop.index')+'#contacto')
     return render_template(
         'shop/index.html', 
