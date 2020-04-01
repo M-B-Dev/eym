@@ -1,0 +1,11 @@
+venv\Scripts\activate
+//open new terminal//
+git pull orgin master
+git checkout -b <name of branch>
+//back to other terminal//
+flask run //start server//
+ctrl + c //stop server//
+//git terminal//
+git add .
+git commit -m "<name of commit>"
+git push origin  <name of branch>
