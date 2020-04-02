@@ -12,7 +12,7 @@ from wtforms import(
 
 from wtforms.fields.html5 import EmailField
 
-from wtforms.validators import DataRequired, InputRequired, Optional
+from wtforms.validators import DataRequired, InputRequired, Optional, Email
 
 from flask_wtf.file import FileAllowed, FileField
 
@@ -27,7 +27,10 @@ from app.models import Product, User
 class FeedbackForm(FlaskForm):
     """Feedback email form."""
     message = TextAreaField(validators=[DataRequired()])
-    email = EmailField()
+    email = EmailField("Email", [
+        InputRequired("Please enter your email address."), 
+        Email("Please enter your email address.")
+        ])
     submit = SubmitField('Send')
 
 
