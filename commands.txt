@@ -1,6 +1,6 @@
 venv\Scripts\activate
 //open new terminal//
-git pull orgin master
+git pull origin master
 git checkout -b <name of branch>
 //back to other terminal//
 flask run //start server//
