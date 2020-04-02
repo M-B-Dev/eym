@@ -27,9 +27,8 @@ from app.models import Product, User
 class FeedbackForm(FlaskForm):
     """Feedback email form."""
     message = TextAreaField(validators=[DataRequired()])
-    email = EmailField(
-        "Email", 
-        [InputRequired("Please enter your email address."), 
+    email = EmailField("Email", [
+        InputRequired("Please enter your email address."), 
         Email("Please enter your email address.")
         ])
     submit = SubmitField('Send')
