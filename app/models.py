@@ -42,7 +42,7 @@ class About(db.Model):
 
 
     def __repr__(self):
-        return '<About {}>'.format(self.body)
+        return '{}'.format(self.body)
 
 
 class User(UserMixin, db.Model):
