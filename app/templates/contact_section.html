@@ -1,11 +1,7 @@
 <!--- Connect -->
 <div class="container-fluid padding" id="contacto">
     <div class="row text-center padding">
-        <div class="col-12">
-            <h4>Contacto</h4>
-        </div>
         <div class="container">
-          {% if current_user.is_authenticated %}
             {% with messages = get_flashed_messages() %}
               {% if messages %}
                   {% for message in messages %} 
@@ -13,7 +9,7 @@
                   {% endfor %}
               {% endif %}
             {% endwith %}		
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contacta nostotros</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contactanos</button>
                   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                       <div class="modal-content">
@@ -39,12 +35,6 @@
                       </div>
                     </div>
                   </div>	  
-             {% endif %}
-        </div>
-        <div class="col-12 social padding">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
         </div>
     </div>
 </div>
