@@ -1,5 +1,7 @@
 from flask_wtf import FlaskForm
 
+from flask_babel import lazy_gettext as _l
+
 from wtforms import(
     StringField, 
     IntegerField, 
@@ -27,11 +29,11 @@ from app.models import Product, User
 class FeedbackForm(FlaskForm):
     """Feedback email form."""
     message = TextAreaField(validators=[DataRequired()])
-    email = EmailField("Email", [
-        InputRequired("Please enter your email address."), 
-        Email("Please enter your email address.")
+    email = EmailField(_l("Email"), [
+        InputRequired(_l("Please enter your email address.")), 
+        Email(_l("Please enter your email address."))
         ])
-    submit = SubmitField('Send')
+    submit = SubmitField(_l('Send'))
 
 
 class ReportForm(FlaskForm):
@@ -44,34 +46,34 @@ class ReportForm(FlaskForm):
         query_factory=Product.product_query, 
         get_label="item"
         )
-    frm = DateField('From', validators=[Optional()])
-    to = DateField('To', validators=[Optional()])
+    frm = DateField(_l('From'), validators=[Optional()])
+    to = DateField(_l('To'), validators=[Optional()])
     submit = SubmitField('Generate')
 
 
 class EditAboutForm(FlaskForm):
     """About section form."""
     body = TextAreaField()
-    submit = SubmitField('Edit')
+    submit = SubmitField(_l('Edit'))
 
 
 class NewProductForm(FlaskForm):
     """New product form."""
-    item = StringField('item name', validators=[DataRequired()])
-    qty = IntegerField('Quantity', validators=[InputRequired()])
-    price = FloatField('Price', validators=[DataRequired()])
+    item = StringField(_l('item name'), validators=[DataRequired()])
+    qty = IntegerField(_l('Quantity'), validators=[InputRequired()])
+    price = FloatField(_l('Price'), validators=[DataRequired()])
     cat = SelectField(
-        'Category', 
+        _l('Category'), 
         validators=[DataRequired()], 
         choices=[("Empty Box", "Empty Box"), ("Item", "Item"), ("Box", "Box")]
         )
-    description = StringField('Description')
+    description = StringField(_l('Description'))
     image_file = FileField(
-        'Product Image', 
+        _l('Product Image'), 
         validators=[FileAllowed(['jpg', 'png', 'jpeg'])]
         )
     back_image_file = FileField(
-        'Description Image', 
+        _l('Description Image'), 
         validators=[FileAllowed(['jpg', 'png', 'jpeg'])]
         )
-    submit = SubmitField('Submit')
+    submit = SubmitField(_l('Submit'))

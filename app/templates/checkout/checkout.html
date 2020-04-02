@@ -7,7 +7,7 @@
 <div class="container-fluid padding">
     <div class="row welcome text-left">
         <div class="col-12">
-            <h1>Checkout</h1>
+            <h1>{{ _('Checkout') }}</h1>
             {% with messages = get_flashed_messages() %}
                 {% if messages %}
                     {% for message in messages %} 
@@ -17,15 +17,15 @@
             {% endwith %}
             <form action="" method="post" enctype="multipart/form-data">
                 {{ form.hidden_tag() }}
-                <h3>Your order: </h3>
+                <h3>{{ _('Your order') }}: </h3>
                 {% for item in user_order %}
                     {% if item[4] %} 
                         <div class='alert alert-danger'>{{item[4]}}</div>
                     {% endif %}
-                    <p>{{item[3]}} x {{ item[0] }}, price: ${{'%0.2f'| format((item[1]*item[3])|float)}}</p>
+                    <p>{{item[3]}} x {{ item[0] }}, {{ _('price') }}: ${{'%0.2f'| format((item[1]*item[3])|float)}}</p>
                 {% endfor %}
-                <h2>Total: ${{'%0.2f'|format((user_total/100))}}</h2>
-                <p><a href="{{ url_for('checkout.checkout')}}"><button type="button" class="btn btn-warning">Update Total</button></a></p>
+                <h2>{{ _('Total') }}: ${{'%0.2f'|format((user_total/100))}}</h2>
+                <p><a href="{{ url_for('checkout.checkout')}}"><button type="button" class="btn btn-warning">{{ _('Update Total') }}</button></a></p>
                 <fieldset class="form-group">
                 <div class="form-group">
                     {{ form.name.label(class="form-control-label") }}
@@ -121,7 +121,7 @@
                 {% for message_form in form.message_details %}
                 {{ message_form.hidden_tag() }}
                     <div class="form-group">
-                        Enter your message for {{ message_form.Gift_message.label }}
+                        {{ _('Enter your message for') }} {{ message_form.Gift_message.label }}
                         {% if message_form.Gift_message.errors %}
                             {{ message_form.Gift_message(class="form-control form-control-lg is-invalid") }}
                             <div class="invalid-feedback">
@@ -143,7 +143,7 @@
                 {% endif %}
                 {% if box_count > 1 %}
                 <div class="form-group">
-                    Choose which box you want {{ box_choice.box.label }} to go in
+                    {{ _('Choose which box you want') }} {{ box_choice.box.label }} {{ _('to go in') }}
                     {% if box_choice.box.errors %}
                         {{ box_choice.box(class="form-control form-control-lg is-invalid") }}
                         <div class="invalid-feedback">
@@ -189,7 +189,7 @@
                 </script>
             </p>      
             </form>
-            <a href="{{ url_for('shop.index')}}"><button type="button" class="btn btn-primary">Continue Shopping</button></a>
+            <a href="{{ url_for('shop.index')}}"><button type="button" class="btn btn-primary">{{ _('Continue Shopping') }}</button></a>
 
         </div>
         </div>

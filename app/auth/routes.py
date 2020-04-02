@@ -6,6 +6,8 @@ from flask_login import logout_user, login_required
 
 from flask_login import login_user
 
+from flask_babel import _
+
 from oauthlib.oauth2 import WebApplicationClient
 
 from flask import(
@@ -98,7 +100,7 @@ def callback():
             db.session.add(user)
             db.session.commit()
     else:
-        return "User email not available or not verified by Google.", 400
+        return _("User email not available or not verified by Google."), 400
     return redirect(url_for("shop.index"))
 
 

@@ -15,15 +15,15 @@
                         {% endfor %}
                     {% endif %}
                 {% endwith %}
-                <h1>Products Section</h1>
-                <p><a href="{{ url_for('admin.new_product') }}"><button type="button" class="btn btn-primary">New Product</button></a></p>
+                <h1>{{ _('Products Section') }}</h1>
+                <p><a href="{{ url_for('admin.new_product') }}"><button type="button" class="btn btn-primary">{{ _('New Product') }}</button></a></p>
             </div>
         </div>
     </div>
 
     <!-- Themed box section -->
     <div class="container-fluid padding">
-        <h2>Themed Boxes</h2>
+        <h2>{{ _('Themed Boxes') }}</h2>
         <div class="row padding" class="store-items" id="store">
             {% for product in products %}
                 {% if product.cat == "Box" %}
@@ -33,15 +33,15 @@
                                 <img class="card-img-top" src="static/img/{{ product.image_file }}">
                             </div>  
                             <div class="card-body">
-                                <h4 class="card-title">Name: {{product.item}}</h4>
-                                <p class="card-text">Price: ${{'%0.2f'| format(product.price|float)}}</p>
-                                <p>Quantity: {{ product.qty }}</p>
-                                <p>Category: {{ product.cat }}</p>
-                                <p>Decription: {{ product.description }}</p>
+                                <h4 class="card-title">{{ _('Name:') }} {{product.item}}</h4>
+                                <p class="card-text">{{ _('Price:') }} ${{'%0.2f'| format(product.price|float)}}</p>
+                                <p>{{ _('Quantity:') }} {{ product.qty }}</p>
+                                <p>{{ _('Category') }}: {{ product.cat }}</p>
+                                <p>{{ _('Decription') }}: {{ product.description }}</p>
                                 <a href="{{ url_for('admin.product_users', product_id=product.id)}}">
-                                    <button type="button" class="btn btn-primary">user who bought {{ product.item }}</button>
+                                    <button type="button" class="btn btn-primary">{{ _('user who bought') }} {{ product.item }}</button>
                                 </a>
-                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">Edit {{product.item}}</button></a>
+                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">{{ _('Edit') }} {{product.item}}</button></a>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
 
     <!-- Empty Boc Section-->
     <div class="container-fluid padding">
-        <h2>Empty Boxes</h2>
+        <h2>{{ _('Empty Boxes') }}</h2>
         <div class="row padding" class="store-items" id="store">
             {% for product in products %}
                 {% if product.cat == "Empty Box" %}
@@ -63,15 +63,15 @@
                                 <img class="card-img-top" src="static/img/{{ product.image_file }}">
                             </div>  
                             <div class="card-body">
-                                <h4 class="card-title">Name: {{product.item}}</h4>
-                                <p class="card-text">Price: ${{'%0.2f'| format(product.price|float)}}</p>
-                                <p>Quantity: {{ product.qty }}</p>
-                                <p>Category: {{ product.cat }}</p>
-                                <p>Decription: {{ product.description }}</p>
+                                <h4 class="card-title">{{ _('Name:') }} {{product.item}}</h4>
+                                <p class="card-text">{{ _('Price:') }} ${{'%0.2f'| format(product.price|float)}}</p>
+                                <p>{{ _('Quantity:') }} {{ product.qty }}</p>
+                                <p>{{ _('Category:') }} {{ product.cat }}</p>
+                                <p>{{ _('Decription:') }} {{ product.description }}</p>
                                 <a href="{{ url_for('admin.product_users', product_id=product.id)}}">
-                                    <button type="button" class="btn btn-primary">user who bought {{ product.item }}</button>
+                                    <button type="button" class="btn btn-primary">{{ _('user who bought') }} {{ product.item }}</button>
                                 </a>
-                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">Edit {{product.item}}</button></a>
+                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">{{ _('Edit') }} {{product.item}}</button></a>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
 
     <!-- single item section -->
     <div class="container-fluid padding">
-        <h2>Individual Items</h2>
+        <h2>{{ _('Individual Items') }}</h2>
         <div class="row padding" class="store-items" id="store">  
             {% for product in products %}
                 {% if product.cat == "Item" %}
@@ -93,15 +93,15 @@
                                 <img class="card-img-top" src="static/img/{{ product.image_file }}">
                             </div>  
                             <div class="card-body">
-                                <h4 class="card-title">Name: {{product.item}}</h4>
-                                <p class="card-text">Price: ${{'%0.2f'| format(product.price|float)}}</p>
-                                <p>Quantity: {{ product.qty }}</p>
-                                <p>Category: {{ product.cat }}</p>
-                                <p>Decription: {{ product.description }}</p>
+                                <h4 class="card-title">{{ _('Name:') }} {{product.item}}</h4>
+                                <p class="card-text">{{ _('Price:') }} ${{'%0.2f'| format(product.price|float)}}</p>
+                                <p>{{ _('Quantity:') }} {{ product.qty }}</p>
+                                <p>{{ _('Category:') }} {{ product.cat }}</p>
+                                <p>{{ _('Decription:') }} {{ product.description }}</p>
                                 <a href="{{ url_for('admin.product_users', product_id=product.id)}}">
-                                    <button type="button" class="btn btn-primary">user who bought {{ product.item }}</button>
+                                    <button type="button" class="btn btn-primary">{{ _('user who bought') }} {{ product.item }}</button>
                                 </a>
-                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">Edit {{product.item}}</button></a>
+                                <a href="{{ url_for('admin.edit_product', product_id=product.id)}}"><button type="button" class="btn btn-primary">{{ _('Edit') }} {{product.item}}</button></a>
                             </div>
                         </div>
                     </div>

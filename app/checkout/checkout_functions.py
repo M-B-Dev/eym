@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from flask import(
     redirect, 
     url_for, 
@@ -5,10 +7,13 @@ from flask import(
     flash
     )
 
+from flask_babel import _
+
 from flask_login import current_user
+
 from app.models import Product, Order
+
 from app import db
-from datetime import datetime
 
 
 def return_message(
@@ -24,47 +29,47 @@ def return_message(
     """
 
     message_strings = {
-        "plural_stock_out": f"""Unfortunately there are not {item[4]} 
-            {product}'s in stock. There is {new_qty} 
-            {product} available
-            """,
-        "singular_stock_out": f"""Unfortunately there are not {item[4]} 
-            {product}'s in stock. There is {new_qty} 
-            {product} available
-            """,
-        "no_empty_box": f"""You have ordered one or more single 
+        "plural_stock_out": _("""Unfortunately there are not %(name)s 
+            %(product)s's in stock. There is %(product)s 
+            %(product)s available
+            """, name=item[4], product=product, new_qty=new_qty),
+        "singular_stock_out": _("""Unfortunately there are not %(name)s  
+            %(product)s's in stock. There is %(product)s 
+            %(product)s available
+            """, name=item[4], product=product, new_qty=new_qty),
+        "no_empty_box": _("""You have ordered one or more single 
             items without a box, please choose a 
             box or remove the item before proceeding
-            """,
-        "no_items": f"""You have ordered a single box without 
+            """),
+        "no_items": _("""You have ordered a single box without 
             any items, please choose an item 
             or remove the item before proceeding
-            """,
-        "insufficient_boxes": f"""You have ordered {item_count} items but 
-            only {box_count} empty box. There is a maximum 
+            """),
+        "insufficient_boxes": _("""You have ordered %(item_count)s items but 
+            only %(box_count)s empty box. There is a maximum 
             of 3 items to an empty box. Please revise your 
             order by reducing the number of items 
             or adding an empty box to your order
-            """,
-        "insufficient_boxes_plural": f"""You have ordered {item_count} 
-            items but only {box_count} empty boxes. There is a maximum of 
+            """, item_count=item_count, box_count=box_count),
+        "insufficient_boxes_plural": _("""You have ordered %(item_count)s 
+            items but only %(box_count)s empty boxes. There is a maximum of 
             3 items to an empty box. Please revise your order 
             by reducing the number of items or adding an empty 
             box to your order
-            """,
-        "more_boxes_than_items": f"""You have ordered more empty boxes 
+            """, item_count=item_count, box_count=box_count),
+        "more_boxes_than_items": _("""You have ordered more empty boxes 
             than items. There is a minimum of 1 item to an empty box. 
             Please revise your order by reducing the number of empty 
             boxes or adding an item to your order
-            """,
-        "too_many_items": f"""You can only put 3 items in a box. 
+            """),
+        "too_many_items": _("""You can only put 3 items in a box. 
             Please reselect the items to place in each box. 
             Your card has not been charged
-            """,
-        'insufficient_items': f"""You are trying to send an empty box. 
+            """),
+        'insufficient_items': _("""You are trying to send an empty box. 
             Please make sure that each box contains at 
             least one item. Your card has not been charged
-            """
+            """)
         }
     return message_strings[key]
 

@@ -13,7 +13,7 @@
                         {% endfor %}
                     {% endif %}
                 {% endwith %}
-                <h1>Edit Product</h1>
+                <h1>{{ _('Edit Product') }}</h1>
                 <div class="row padding" class="store-items" id="boxes">
                     <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item chrsitmas">
                         <div class="card">
@@ -21,7 +21,7 @@
                                 <img class="card-img-top" src="static/img/{{ product.image_file }}">
                             </div>
                         </div>
-                        <div class="form-control-label">Main Image</div>
+                        <div class="form-control-label">{{ _('Main Image') }}</div>
                     </div>
                     <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item chrsitmas">
                     <div class="card">
@@ -29,7 +29,7 @@
                             <img class="card-img-top" src="static/img/{{ product.back_image_file }}">
                         </div>
                     </div>
-                    <div class="form-control-label">Description Image</div>
+                    <div class="form-control-label">{{ _('Description Image') }}</div>
                     </div> 
                 </div>    
                 <form action="" method="post" enctype="multipart/form-data">
@@ -128,10 +128,10 @@
                         </div>
                     </fieldset>
                     <p>{{form.submit(class="btn btn-primary")}}</p>
-                    <p><a href="{{ url_for('admin.products') }}"><button type="button" class="btn btn-secondary">Back to products</button></a></p>
+                    <p><a href="{{ url_for('admin.products') }}"><button type="button" class="btn btn-secondary">{{ _('Back to products') }}</button></a></p>
                 </form>
             </div>
-            <p><a href="{{ url_for('admin.delete_product', product_id=product_id)}}"><button type="button" class="btn btn-danger">DELETE THIS PRODUCT</button></a>
+            <p><a href="{{ url_for('admin.delete_product', product_id=product_id)}}"><button type="button" class="btn btn-danger">{{ _('DELETE THIS PRODUCT') }}</button></a>
         </div>
     </div>
 {% endblock %}

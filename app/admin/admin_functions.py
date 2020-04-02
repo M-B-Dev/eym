@@ -6,6 +6,8 @@ from PIL import Image, ImageOps
 
 from flask_login import current_user
 
+from flask_babel import _
+
 from flask import current_app, flash, redirect, url_for
 
 from app.models import Product
@@ -46,7 +48,7 @@ def post_edit_product_form(form, product):
     product.description = form.description.data
     product.price = form.price.data
     db.session.commit()
-    flash('Your changes have been saved.')
+    flash(_('Your changes have been saved.'))
     return redirect(url_for('admin.edit_product', product_id=product.id))
 
 
