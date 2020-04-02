@@ -1,5 +1,7 @@
 from flask_login import login_required, current_user
 
+from flask_babel import _
+
 from flask import( 
     render_template, 
     flash, 
@@ -46,7 +48,7 @@ def admin():
     if form.validate_on_submit():
         about.body = form.body.data
         db.session.commit()
-        flash('Your changes have been saved.')
+        flash(_('Your changes have been saved.'))
         return redirect(url_for('admin.admin'))
     elif request.method == 'GET':
         form.body.data = about.body       
@@ -201,7 +203,7 @@ def turn_admin_or_user(user_id):
     else:
         user.status = "admin"
     db.session.commit()
-    flash('Your changes have been saved.')
+    flash(_('Your changes have been saved.'))
     return redirect(url_for('admin.users'))
 
 
@@ -219,7 +221,7 @@ def reports():
     if form.validate_on_submit():
         if current_user.get_task_in_progress('export_report'):
             print(current_user.get_task_in_progress('export_report'))
-            flash('An export task is currently in progress')
+            flash(_('An export task is currently in progress'))
         if True:
             current_user.launch_task(
                 'export_report', 

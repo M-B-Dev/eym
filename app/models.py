@@ -19,6 +19,7 @@ from app import db, login
 
 class Order(db.Model):
     """This keeps track of which buyers have bought which products."""
+
     id = db.Column(db.Integer, primary_key=True, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'))
@@ -30,16 +31,15 @@ class Order(db.Model):
         default=datetime.utcnow
         )
 
-
     def __repr__(self):
         return '<Order {}>'.format(self.id)
 
 
 class About(db.Model):
     """This stores the about us text."""
+
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String(140))
-
 
     def __repr__(self):
         return '{}'.format(self.body)
@@ -47,6 +47,7 @@ class About(db.Model):
 
 class User(UserMixin, db.Model):
     """This store the data for each user."""
+
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True)
     email = db.Column(db.String(120), index=True, unique=True)
@@ -64,25 +65,20 @@ class User(UserMixin, db.Model):
     notifications = db.relationship('Notification', backref='user',
                                     lazy='dynamic')
 
-
     def __repr__(self):
         return '<User {}>'.format(self.username)
-
 
     def set_password(self, password):
         """This hashes the user password."""
         self.password_hash = generate_password_hash(password)
 
-
     def check_password(self, password):
         """This checks the hashed password is correct."""
         return check_password_hash(self.password_hash, password)
     
-
     def user_query():
         """This helper function is for generating reports."""
         return User.query
-
 
     def launch_task(
             self, 
@@ -114,22 +110,21 @@ class User(UserMixin, db.Model):
         db.session.add(task)
         return task
 
-
     def get_tasks_in_progress(self):
         """This returns every task for a given user."""
         return Task.query.filter_by(user=self, complete=False).all()
-
 
     def get_task_in_progress(self, name):
         """This returns the most recent incomplete task."""
         return Task.query.filter_by(name=name, user=self,
                                     complete=False).first()
 
-
     def add_notification(self, name, data):
-        """This adds a notification to the Notification 
+        """This adds a notification to the Notification
+
         table for a specific user.
         """
+        
         self.notifications.filter_by(name=name).delete()
         n = Notification(
             name=name, 
@@ -142,12 +137,12 @@ class User(UserMixin, db.Model):
 
 class Notification(db.Model):
     """The Notifications tabel."""
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(128), index=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     timestamp = db.Column(db.Float, index=True, default=time)
     payload_json = db.Column(db.Text)
-
 
     def get_data(self):
         """This returns the notifcations as a JSON object."""
@@ -162,7 +157,6 @@ class Task(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     complete = db.Column(db.Boolean, default=False)
 
-
     def get_rq_job(self):
         """This fecthes the current process of a user."""
         try:
@@ -176,7 +170,6 @@ class Task(db.Model):
             ):
             return None
         return rq_job
-
 
     def get_progress(self):
         """This establishes the prgress of a process."""
@@ -209,15 +202,15 @@ class Product(db.Model):
     description = db.Column(db.String(128), nullable=True)
     orders = db.relationship('Order', backref='product', lazy='dynamic')
         
-
     def __repr__(self):
         return '<Product {}>'.format(self.item)
 
-
     def product_query():
         """Ths helper returns a query function for select 
+
         field in the reports.
         """
+
         return Product.query
 
 

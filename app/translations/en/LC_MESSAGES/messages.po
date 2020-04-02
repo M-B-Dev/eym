@@ -1,0 +1,631 @@
+# English translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-04-02 22:23+0100\n"
+"PO-Revision-Date: 2020-04-02 22:47+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: app/__init__.py:31 app/__init__.py:48
+msgid "Please log in to access this page."
+msgstr ""
+
+#: app/tasks.py:76
+msgid "Error when exporting"
+msgstr ""
+
+#: app/tasks.py:77
+msgid "Unhandled exception"
+msgstr ""
+
+#: app/tasks.py:97
+msgid "Report Results %(date)"
+msgstr ""
+
+#: app/admin/forms.py:32 app/tasks.py:100
+msgid "Email"
+msgstr ""
+
+#: app/tasks.py:101
+msgid "Product"
+msgstr ""
+
+#: app/tasks.py:102
+msgid "Date"
+msgstr ""
+
+#: app/admin/forms.py:63 app/tasks.py:103
+msgid "Quantity"
+msgstr ""
+
+#: app/tasks.py:141
+msgid "Export complete"
+msgstr ""
+
+#: app/tasks.py:143
+msgid "No results"
+msgstr ""
+
+#: app/admin/admin_functions.py:51 app/admin/routes.py:51
+#: app/admin/routes.py:206
+msgid "Your changes have been saved."
+msgstr ""
+
+#: app/admin/forms.py:33 app/admin/forms.py:34
+msgid "Please enter your email address."
+msgstr ""
+
+#: app/admin/forms.py:36
+msgid "Send"
+msgstr ""
+
+#: app/admin/forms.py:49
+msgid "From"
+msgstr ""
+
+#: app/admin/forms.py:50
+msgid "To"
+msgstr ""
+
+#: app/admin/forms.py:57 app/templates/admin/products.html:44
+#: app/templates/admin/products.html:74 app/templates/admin/products.html:104
+msgid "Edit"
+msgstr ""
+
+#: app/admin/forms.py:62
+msgid "item name"
+msgstr ""
+
+#: app/admin/forms.py:64
+msgid "Price"
+msgstr ""
+
+#: app/admin/forms.py:66 app/templates/admin/products.html:39
+msgid "Category"
+msgstr ""
+
+#: app/admin/forms.py:70
+msgid "Description"
+msgstr ""
+
+#: app/admin/forms.py:72
+msgid "Product Image"
+msgstr ""
+
+#: app/admin/forms.py:76 app/templates/admin/edit_product.html:32
+msgid "Description Image"
+msgstr ""
+
+#: app/admin/forms.py:79
+msgid "Submit"
+msgstr ""
+
+#: app/admin/routes.py:224
+msgid "An export task is currently in progress"
+msgstr ""
+
+#: app/auth/routes.py:103
+msgid "User email not available or not verified by Google."
+msgstr ""
+
+#: app/checkout/checkout_functions.py:32
+#, python-format
+msgid ""
+"Unfortunately there are not %(name)s \n"
+"            %(product)s's in stock. There is %(product)s \n"
+"            %(product)s available\n"
+"            "
+msgstr ""
+
+#: app/checkout/checkout_functions.py:36
+#, python-format
+msgid ""
+"Unfortunately there are not %(name)s  \n"
+"            %(product)s's in stock. There is %(product)s \n"
+"            %(product)s available\n"
+"            "
+msgstr ""
+
+#: app/checkout/checkout_functions.py:40
+msgid ""
+"You have ordered one or more single \n"
+"            items without a box, please choose a \n"
+"            box or remove the item before proceeding\n"
+"            "
+msgstr ""
+
+#: app/checkout/checkout_functions.py:44
+msgid ""
+"You have ordered a single box without \n"
+"            any items, please choose an item \n"
+"            or remove the item before proceeding\n"
+"            "
+msgstr ""
+
+#: app/checkout/checkout_functions.py:48
+#, python-format
+msgid ""
+"You have ordered %(item_count)s items but \n"
+"            only %(box_count)s empty box. There is a maximum \n"
+"            of 3 items to an empty box. Please revise your \n"
+"            order by reducing the number of items \n"
+"            or adding an empty box to your order\n"
+"            "
+msgstr ""
+
+#: app/checkout/checkout_functions.py:54
+#, python-format
+msgid ""
+"You have ordered %(item_count)s \n"
+"            items but only %(box_count)s empty boxes. There is a maximum "
+"of \n"
+"            3 items to an empty box. Please revise your order \n"
+"            by reducing the number of items or adding an empty \n"
+"            box to your order\n"
+"            "
+msgstr ""
+
+#: app/checkout/checkout_functions.py:60
+msgid ""
+"You have ordered more empty boxes \n"
+"            than items. There is a minimum of 1 item to an empty box. \n"
+"            Please revise your order by reducing the number of empty \n"
+"            boxes or adding an item to your order\n"
+"            "
+msgstr ""
+
+#: app/checkout/checkout_functions.py:65
+msgid ""
+"You can only put 3 items in a box. \n"
+"            Please reselect the items to place in each box. \n"
+"            Your card has not been charged\n"
+"            "
+msgstr ""
+
+#: app/checkout/checkout_functions.py:69
+msgid ""
+"You are trying to send an empty box. \n"
+"            Please make sure that each box contains at \n"
+"            least one item. Your card has not been charged\n"
+"            "
+msgstr ""
+
+#: app/checkout/forms.py:42 app/templates/admin/users.html:18
+msgid "Name"
+msgstr ""
+
+#: app/checkout/forms.py:44
+msgid "Address Line 1"
+msgstr ""
+
+#: app/checkout/forms.py:47
+msgid "Adress Line 2"
+msgstr ""
+
+#: app/checkout/forms.py:48
+msgid "Adress Line 3"
+msgstr ""
+
+#: app/checkout/forms.py:49
+msgid "City"
+msgstr ""
+
+#: app/checkout/forms.py:50
+msgid "State"
+msgstr ""
+
+#: app/checkout/forms.py:52
+msgid "Postal/Zip Code"
+msgstr ""
+
+#: app/checkout/forms.py:55
+msgid "Instructions"
+msgstr ""
+
+#: app/checkout/forms.py:56
+msgid "Pay"
+msgstr ""
+
+#: app/templates/cart_section.html:11
+msgid "Price: $"
+msgstr ""
+
+#: app/templates/admin/product_users.html:13
+#: app/templates/admin/products.html:38 app/templates/admin/products.html:68
+#: app/templates/admin/products.html:98 app/templates/cart_section.html:12
+msgid "Quantity:"
+msgstr ""
+
+#: app/templates/cart_section.html:24
+msgid "total"
+msgstr ""
+
+#: app/templates/contact_section.html:12
+msgid "Contactanos"
+msgstr ""
+
+#: app/templates/footer_section.html:12 app/templates/nav_section.html:22
+msgid "Contacto"
+msgstr ""
+
+#: app/templates/footer_section.html:18
+msgid "Siguenos"
+msgstr ""
+
+#: app/templates/footer_section.html:28
+msgid "Dirección"
+msgstr ""
+
+#: app/templates/footer_section.html:30
+msgid "Panamá, Panamá"
+msgstr ""
+
+#: app/templates/nav_section.html:12
+msgid "Inicio"
+msgstr ""
+
+#: app/templates/nav_section.html:15
+msgid "Quiénes somos"
+msgstr ""
+
+#: app/templates/nav_section.html:18
+msgid "Productos"
+msgstr ""
+
+#: app/templates/nav_section.html:28
+msgid "Sign in"
+msgstr ""
+
+#: app/templates/nav_section.html:32
+msgid "Log out"
+msgstr ""
+
+#: app/templates/nav_section.html:36
+msgid "admin"
+msgstr ""
+
+#: app/templates/nav_section.html:47
+msgid "item - $"
+msgstr ""
+
+#: app/templates/nav_section.html:49
+msgid "items - $"
+msgstr ""
+
+#: app/templates/admin/admin.html:16
+msgid "Edit About Section"
+msgstr ""
+
+#: app/templates/admin/admin.html:35 app/templates/admin/products.html:18
+msgid "Products Section"
+msgstr ""
+
+#: app/templates/admin/admin.html:36
+msgid "Products"
+msgstr ""
+
+#: app/templates/admin/admin.html:37 app/templates/admin/users.html:7
+msgid "Users Section"
+msgstr ""
+
+#: app/templates/admin/admin.html:38
+msgid "Users"
+msgstr ""
+
+#: app/templates/admin/admin.html:39 app/templates/admin/reports.html:7
+msgid "Reports Section"
+msgstr ""
+
+#: app/templates/admin/admin.html:40
+msgid "Reports"
+msgstr ""
+
+#: app/templates/admin/edit_product.html:16
+msgid "Edit Product"
+msgstr ""
+
+#: app/templates/admin/edit_product.html:24
+msgid "Main Image"
+msgstr ""
+
+#: app/templates/admin/edit_product.html:131
+#: app/templates/admin/new_product.html:106
+#: app/templates/admin/product_users.html:19
+msgid "Back to products"
+msgstr ""
+
+#: app/templates/admin/edit_product.html:134
+msgid "DELETE THIS PRODUCT"
+msgstr ""
+
+#: app/templates/admin/new_product.html:9 app/templates/admin/products.html:19
+msgid "New Product"
+msgstr ""
+
+#: app/templates/admin/product_users.html:7
+msgid "Product Users Section:"
+msgstr ""
+
+#: app/templates/admin/product_users.html:12
+msgid "User:"
+msgstr ""
+
+#: app/templates/admin/product_users.html:14
+#: app/templates/admin/user_products.html:19
+msgid "Last ordered:"
+msgstr ""
+
+#: app/templates/admin/products.html:26
+msgid "Themed Boxes"
+msgstr ""
+
+#: app/templates/admin/products.html:36 app/templates/admin/products.html:66
+#: app/templates/admin/products.html:96
+msgid "Name:"
+msgstr ""
+
+#: app/templates/admin/products.html:37 app/templates/admin/products.html:67
+#: app/templates/admin/products.html:97
+msgid "Price:"
+msgstr ""
+
+#: app/templates/admin/products.html:40
+msgid "Decription"
+msgstr ""
+
+#: app/templates/admin/products.html:42 app/templates/admin/products.html:72
+#: app/templates/admin/products.html:102
+msgid "user who bought"
+msgstr ""
+
+#: app/templates/admin/products.html:56
+msgid "Empty Boxes"
+msgstr ""
+
+#: app/templates/admin/products.html:69 app/templates/admin/products.html:99
+msgid "Category:"
+msgstr ""
+
+#: app/templates/admin/products.html:70 app/templates/admin/products.html:100
+msgid "Decription:"
+msgstr ""
+
+#: app/templates/admin/products.html:86
+msgid "Individual Items"
+msgstr ""
+
+#: app/templates/admin/reports.html:94
+msgid "Back to admin"
+msgstr ""
+
+#: app/templates/admin/user_products.html:7
+msgid "User Products Section"
+msgstr ""
+
+#: app/templates/admin/user_products.html:13
+msgid "Product: Deleted"
+msgstr ""
+
+#: app/templates/admin/user_products.html:15
+msgid "Product:"
+msgstr ""
+
+#: app/templates/admin/user_products.html:17
+msgid "Quantity bought:"
+msgstr ""
+
+#: app/templates/admin/user_products.html:25
+msgid "Back to users"
+msgstr ""
+
+#: app/templates/admin/users.html:20
+msgid "current status"
+msgstr ""
+
+#: app/templates/admin/users.html:22
+msgid "products bought by"
+msgstr ""
+
+#: app/templates/admin/users.html:26
+msgid "Set as admin"
+msgstr ""
+
+#: app/templates/admin/users.html:29
+msgid "Master Admin"
+msgstr ""
+
+#: app/templates/admin/users.html:32
+msgid "Set as user"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:10
+#: app/templates/checkout/checkout_error.html:10
+msgid "Checkout"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:20
+msgid "Your order"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:25
+msgid "price"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:27
+#: app/templates/checkout/invoice.html:45
+#: app/templates/checkout/invoice_pdf.html:38
+#: app/templates/checkout/order_email.html:35
+msgid "Total"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:28
+msgid "Update Total"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:124
+msgid "Enter your message for"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:146
+msgid "Choose which box you want"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:146
+msgid "to go in"
+msgstr ""
+
+#: app/templates/checkout/checkout.html:192
+#: app/templates/checkout/checkout_error.html:13
+msgid "Continue Shopping"
+msgstr ""
+
+#: app/templates/checkout/checkout_error.html:12
+msgid "Update Cart"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:10
+msgid "Thank you. Your order has been successful!"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:11
+#: app/templates/checkout/invoice_pdf.html:4
+#: app/templates/checkout/order_email.html:1
+msgid "Dear"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:12
+#: app/templates/checkout/invoice_pdf.html:5
+#: app/templates/checkout/order_email.html:2
+msgid "Your order of"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:18
+#: app/templates/checkout/invoice_pdf.html:11
+#: app/templates/checkout/order_email.html:8
+msgid "at"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:18
+#: app/templates/checkout/invoice_pdf.html:11
+#: app/templates/checkout/order_email.html:8
+msgid "each"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:23
+#: app/templates/checkout/invoice.html:26
+#: app/templates/checkout/invoice.html:30
+#: app/templates/checkout/invoice_pdf.html:16
+#: app/templates/checkout/invoice_pdf.html:19
+#: app/templates/checkout/invoice_pdf.html:23
+#: app/templates/checkout/order_email.html:13
+#: app/templates/checkout/order_email.html:16
+#: app/templates/checkout/order_email.html:20
+msgid "will be attached to"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:38
+#: app/templates/checkout/invoice_pdf.html:31
+#: app/templates/checkout/order_email.html:28
+msgid "will be placed in"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:46
+#: app/templates/checkout/invoice_pdf.html:39
+#: app/templates/checkout/order_email.html:36
+msgid "Will be delivered to"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:62
+#: app/templates/checkout/invoice_pdf.html:55
+#: app/templates/checkout/order_email.html:52
+msgid "With the special instructions"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:67
+#: app/templates/checkout/invoice_pdf.html:60
+#: app/templates/checkout/order_email.html:57
+msgid "Thank you for your order"
+msgstr ""
+
+#: app/templates/checkout/invoice.html:68
+#: app/templates/checkout/invoice_pdf.html:61
+#: app/templates/checkout/order_email.html:58
+msgid "Sincerely"
+msgstr ""
+
+#: app/templates/errors/404.html:11
+msgid "File Not Found"
+msgstr ""
+
+#: app/templates/errors/500.html:11
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app/templates/errors/500.html:12
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr ""
+
+#: app/templates/shop/index.html:19
+msgid "Detalles especiales,"
+msgstr ""
+
+#: app/templates/shop/index.html:20
+msgid "para personas extraordinarias"
+msgstr ""
+
+#: app/templates/shop/index.html:22
+msgid "Arma tu"
+msgstr ""
+
+#: app/templates/shop/index.html:38
+msgid "¿Cómo comprar?"
+msgstr ""
+
+#: app/templates/shop/index.html:49
+msgid "Escoge entre nuestra selección de Gift Boxes."
+msgstr ""
+
+#: app/templates/shop/index.html:53
+msgid "Agrega tu nombre y mensaje a la tarjeta."
+msgstr ""
+
+#: app/templates/shop/index.html:57
+msgid "Envíos a todo Panamá."
+msgstr ""
+
+#: app/templates/shop/index.html:79
+msgid "Nuestras Gift Boxes prediseñadas"
+msgstr ""
+
+#: app/templates/shop/index.html:140
+msgid "Personalizadas"
+msgstr ""
+
+#: app/templates/shop/index.html:151
+msgid "Escoge"
+msgstr ""
+
+#: app/templates/shop/index.html:155
+msgid "Agrega"
+msgstr ""
+
+#: app/templates/shop/index.html:159
+msgid "Identifica"
+msgstr ""
+
+#: app/templates/shop/index.html:163
+msgid "Envía"
+msgstr ""
+

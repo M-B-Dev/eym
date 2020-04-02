@@ -13,7 +13,7 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-            <h1>Edit About Section</h1>
+            <h1>{{ _('Edit About Section') }}</h1>
             <form action="" method="post" enctype="multipart/form-data">
                 {{ form.hidden_tag() }}
                 <fieldset class="form-group">
@@ -32,12 +32,12 @@
                 </fieldset>
                 {{form.submit(class="btn btn-primary")}}
             </form>
-            <h1>Products Section</h1>
-            <p><a href="{{ url_for('admin.products') }}"><button type="button" class="btn btn-primary">Products</button></a></p>
-            <h1>Users Section</h1>
-            <p><a href="{{ url_for('admin.users') }}"><button type="button" class="btn btn-primary">Users</button></a></p>
-            <h1>Reports Section</h1>
-            <p><a href="{{ url_for('admin.reports') }}"><button type="button" class="btn btn-primary">Reports</button></a></p>
+            <h1>{{ _('Products Section') }}</h1>
+            <p><a href="{{ url_for('admin.products') }}"><button type="button" class="btn btn-primary">{{ _('Products') }}</button></a></p>
+            <h1>{{ _('Users Section') }}</h1>
+            <p><a href="{{ url_for('admin.users') }}"><button type="button" class="btn btn-primary">{{ _('Users') }}</button></a></p>
+            <h1>{{ _('Reports Section') }}</h1>
+            <p><a href="{{ url_for('admin.reports') }}"><button type="button" class="btn btn-primary">{{ _('Reports') }}</button></a></p>
         </div>
     </div>
 </div>

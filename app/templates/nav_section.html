@@ -9,31 +9,31 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
-					<a class="nav-link" href="{{url_for('shop.index')}}">Inicio</a>
+					<a class="nav-link" href="{{url_for('shop.index')}}">{{ _('Inicio') }}</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{url_for('shop.index')}}#somos">Quiénes somos</a>
+					<a class="nav-link" href="{{url_for('shop.index')}}#somos">{{ _('Quiénes somos') }}</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{url_for('shop.index')}}#productos">Productos</a>
+					<a class="nav-link" href="{{url_for('shop.index')}}#productos">{{ _('Productos') }}</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="{{url_for('shop.index')}}#contacto">
-						<i class="fas fa-phone"></i> Contacto
+						<i class="fas fa-phone"></i> {{ _('Contacto') }}
 					</a>
 				</li>
 				<!-- authenticated links -->
 				{% if not current_user.is_authenticated %}
 					<li class="nav-item">
-						<a class="nav-link" href="{{url_for('auth.login')}}">Sign in</a>
+						<a class="nav-link" href="{{url_for('auth.login')}}">{{ _('Sign in') }}</a>
 					</li>	
 				{% else %}
 					<li class="nav-item">	
-						<a class="nav-link" href="{{url_for('auth.logout')}}">Log out</a>
+						<a class="nav-link" href="{{url_for('auth.logout')}}">{{ _('Log out') }}</a>
 					</li>
 					{% if current_user.status != "user" %}
 						<li class="nav-item">
-							<a class="nav-link" href="{{url_for('admin.admin')}}">admin</a>
+							<a class="nav-link" href="{{url_for('admin.admin')}}">{{ _('admin') }}</a>
 						</li>
 					{% endif %}
 				{% endif %}
@@ -44,9 +44,9 @@
 					<p class="mb-0 text-capitalize"><span id="item-count"></span>
 						<span class="total-products">
 							{% if total_products == 1 %}
-								{{total_products}} item - $
+								{{total_products}} {{ _('item - $') }}
 							{% else %}
-								{{total_products}} items - $
+								{{total_products}} {{ _('items - $') }}
 							{% endif %}
 						</span>
 						<span class="item-total">

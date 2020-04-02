@@ -19,4 +19,5 @@ class Config(object):
     STRIPE_API_KEY = os.environ.get('STRIPE_API_KEY')
     PRODUCTS_IN_PAGE = 3
     REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
+    LANGUAGES = ['en', 'es']
 

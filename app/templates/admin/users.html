@@ -4,7 +4,7 @@
 {% endblock %}
 {% block content %}
     <div class="container-fluid padding">
-        <h1>Users Section</h1>
+        <h1>{{ _('Users Section') }}</h1>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %} 
@@ -15,21 +15,21 @@
         {% for user in users %}
         <div class="card mb-3 animated fadeIn shadow-sm">
             <div class="card-body">
-                <h4 class="card-title" id="title">Name: {{ user.username }}</h4>
+                <h4 class="card-title" id="title">{{ _('Name') }}: {{ user.username }}</h4>
                 <p class="card-text">Email: {{ user.email }}</p>
-                <p class="text-muted" id="content">current status: {{ user.status }}</p>
+                <p class="text-muted" id="content">{{ _('current status') }}: {{ user.status }}</p>
                 <a href="{{ url_for('admin.user_products', user_id=user.id)}}">
-                    <button type="button" class="btn btn-primary">products bought by {{ user.username }}</button>
+                    <button type="button" class="btn btn-primary">{{ _('products bought by') }} {{ user.username }}</button>
                 </a>
                 {% if user.status == "user" %}
                 <a href="{{ url_for('admin.turn_admin_or_user', user_id=user.id)}}">
-                    <button type="button" class="btn btn-primary">Set as admin</button>
+                    <button type="button" class="btn btn-primary">{{ _('Set as admin') }}</button>
                 </a>
                 {% elif not user.status %}   
-                    <p class="text-muted" id="content"> Master Admin </p>
+                    <p class="text-muted" id="content"> {{ _('Master Admin') }} </p>
                 {% else %}
                     <a href="{{ url_for('admin.turn_admin_or_user', user_id=user.id)}}">
-                        <button type="button" class="btn btn-primary">Set as user</button>
+                        <button type="button" class="btn btn-primary">{{ _('Set as user') }}</button>
                     </a>
                 {% endif %}
             </div>

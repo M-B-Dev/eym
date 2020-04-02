@@ -7,10 +7,10 @@
 <div class="container-fluid padding">
     <div class="row welcome text-left">
         <div class="col-12">
-            <h1>Checkout</h1>
+            <h1>{{ _('Checkout') }}</h1>
                 <div class='alert alert-danger'>{{ error_message }}</div>	
-            <p><a href="{{ url_for('checkout.checkout')}}"><button type="button" class="btn btn-warning">Update Cart</button></a></p>
-            <a href="{{ url_for('shop.index')}}"><button type="button" class="btn btn-primary">Continue Shopping</button></a>
+            <p><a href="{{ url_for('checkout.checkout')}}"><button type="button" class="btn btn-warning">{{ _('Update Cart') }}</button></a></p>
+            <a href="{{ url_for('shop.index')}}"><button type="button" class="btn btn-primary">{{ _('Continue Shopping') }}</button></a>
         </div>
         </div>
     </div>
