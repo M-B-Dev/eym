@@ -20,105 +20,105 @@ msgstr ""
 
 #: app/__init__.py:31 app/__init__.py:48
 msgid "Please log in to access this page."
-msgstr ""
+msgstr "Por favor iniciar sesión para acceder a la página"
 
 #: app/tasks.py:76
 msgid "Error when exporting"
-msgstr ""
+msgstr "Error when exporting"
 
 #: app/tasks.py:77
 msgid "Unhandled exception"
-msgstr ""
+msgstr "Unhandled exception"
 
 #: app/tasks.py:97
 msgid "Report Results %(date)"
-msgstr ""
+msgstr "Report Results %(date)"
 
 #: app/admin/forms.py:32 app/tasks.py:100
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: app/tasks.py:101
 msgid "Product"
-msgstr ""
+msgstr "Producto"
 
 #: app/tasks.py:102
 msgid "Date"
-msgstr ""
+msgstr "Fecha"
 
 #: app/admin/forms.py:63 app/tasks.py:103
 msgid "Quantity"
-msgstr ""
+msgstr "Cantidad"
 
 #: app/tasks.py:141
 msgid "Export complete"
-msgstr ""
+msgstr "Export complete"
 
 #: app/tasks.py:143
 msgid "No results"
-msgstr ""
+msgstr "Sin resultados"
 
 #: app/admin/admin_functions.py:51 app/admin/routes.py:51
 #: app/admin/routes.py:206
 msgid "Your changes have been saved."
-msgstr ""
+msgstr "Cambios guardados"
 
 #: app/admin/forms.py:33 app/admin/forms.py:34
 msgid "Please enter your email address."
-msgstr ""
+msgstr "Por favor ingrese correo electrónico"
 
 #: app/admin/forms.py:36
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #: app/admin/forms.py:49
 msgid "From"
-msgstr ""
+msgstr "Desde"
 
 #: app/admin/forms.py:50
 msgid "To"
-msgstr ""
+msgstr "Hasta"
 
 #: app/admin/forms.py:57 app/templates/admin/products.html:44
 #: app/templates/admin/products.html:74 app/templates/admin/products.html:104
 msgid "Edit"
-msgstr ""
+msgstr "Editar"
 
 #: app/admin/forms.py:62
 msgid "item name"
-msgstr ""
+msgstr "Producto"
 
 #: app/admin/forms.py:64
 msgid "Price"
-msgstr ""
+msgstr "Precio"
 
 #: app/admin/forms.py:66 app/templates/admin/products.html:39
 msgid "Category"
-msgstr ""
+msgstr "Categoria"
 
 #: app/admin/forms.py:70
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #: app/admin/forms.py:72
 msgid "Product Image"
-msgstr ""
+msgstr "Imagen de producto"
 
 #: app/admin/forms.py:76 app/templates/admin/edit_product.html:32
 msgid "Description Image"
-msgstr ""
+msgstr "Descripción"
 
 #: app/admin/forms.py:79
 msgid "Submit"
-msgstr ""
+msgstr "Registrar"
 
 #: app/admin/routes.py:224
 msgid "An export task is currently in progress"
-msgstr ""
+msgstr "An export task is currently in progress"
 
 #: app/auth/routes.py:103
 msgid "User email not available or not verified by Google."
-msgstr ""
+msgstr "Usuario no encontrado o no verificado en Google"
 
 #: app/checkout/checkout_functions.py:32
 #, python-format
@@ -204,324 +204,324 @@ msgstr ""
 
 #: app/checkout/forms.py:42 app/templates/admin/users.html:18
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #: app/checkout/forms.py:44
 msgid "Address Line 1"
-msgstr ""
+msgstr "Dirección 1"
 
 #: app/checkout/forms.py:47
-msgid "Adress Line 2"
-msgstr ""
+msgid "Address Line 2"
+msgstr "Dirección 2"
 
 #: app/checkout/forms.py:48
 msgid "Adress Line 3"
-msgstr ""
+msgstr "Dirección 3"
 
 #: app/checkout/forms.py:49
 msgid "City"
-msgstr ""
+msgstr "Ciudad"
 
 #: app/checkout/forms.py:50
 msgid "State"
-msgstr ""
+msgstr "Provincia"
 
 #: app/checkout/forms.py:52
 msgid "Postal/Zip Code"
-msgstr ""
+msgstr "Código Postal"
 
 #: app/checkout/forms.py:55
 msgid "Instructions"
-msgstr ""
+msgstr "Instrucciones"
 
 #: app/checkout/forms.py:56
 msgid "Pay"
-msgstr ""
+msgstr "Pagar"
 
 #: app/templates/cart_section.html:11
 msgid "Price: $"
-msgstr ""
+msgstr "Precio: $"
 
 #: app/templates/admin/product_users.html:13
 #: app/templates/admin/products.html:38 app/templates/admin/products.html:68
 #: app/templates/admin/products.html:98 app/templates/cart_section.html:12
 msgid "Quantity:"
-msgstr ""
+msgstr "Cantidad"
 
 #: app/templates/cart_section.html:24
 msgid "total"
-msgstr ""
+msgstr "total"
 
 #: app/templates/contact_section.html:12
 msgid "Contactanos"
-msgstr ""
+msgstr "Contactanos"
 
 #: app/templates/footer_section.html:12 app/templates/nav_section.html:22
 msgid "Contacto"
-msgstr ""
+msgstr "Contacto"
 
 #: app/templates/footer_section.html:18
 msgid "Siguenos"
-msgstr ""
+msgstr "Síguenos"
 
 #: app/templates/footer_section.html:28
 msgid "Dirección"
-msgstr ""
+msgstr "Dirección"
 
 #: app/templates/footer_section.html:30
 msgid "Panamá, Panamá"
-msgstr ""
+msgstr "Ciudad de Panamá, Panamá"
 
 #: app/templates/nav_section.html:12
 msgid "Inicio"
-msgstr ""
+msgstr "Inicio"
 
 #: app/templates/nav_section.html:15
 msgid "Quiénes somos"
-msgstr ""
+msgstr "Quíenes somos"
 
 #: app/templates/nav_section.html:18
 msgid "Productos"
-msgstr ""
+msgstr "Productos"
 
 #: app/templates/nav_section.html:28
 msgid "Sign in"
-msgstr ""
+msgstr "Iniciar sesión"
 
 #: app/templates/nav_section.html:32
 msgid "Log out"
-msgstr ""
+msgstr "Cerrar sesión"
 
 #: app/templates/nav_section.html:36
 msgid "admin"
-msgstr ""
+msgstr "admin"
 
 #: app/templates/nav_section.html:47
 msgid "item - $"
-msgstr ""
+msgstr "ítem - $"
 
 #: app/templates/nav_section.html:49
 msgid "items - $"
-msgstr ""
+msgstr "ítems - $"
 
 #: app/templates/admin/admin.html:16
 msgid "Edit About Section"
-msgstr ""
+msgstr "Editar sección Quiénes somos"
 
 #: app/templates/admin/admin.html:35 app/templates/admin/products.html:18
 msgid "Products Section"
-msgstr ""
+msgstr "Sección de productos"
 
 #: app/templates/admin/admin.html:36
 msgid "Products"
-msgstr ""
+msgstr "Productos"
 
 #: app/templates/admin/admin.html:37 app/templates/admin/users.html:7
 msgid "Users Section"
-msgstr ""
+msgstr "Sección Usuarios"
 
 #: app/templates/admin/admin.html:38
 msgid "Users"
-msgstr ""
+msgstr "Usuarios"
 
 #: app/templates/admin/admin.html:39 app/templates/admin/reports.html:7
 msgid "Reports Section"
-msgstr ""
+msgstr "Sección de reportes"
 
 #: app/templates/admin/admin.html:40
 msgid "Reports"
-msgstr ""
+msgstr "Reportes"
 
 #: app/templates/admin/edit_product.html:16
 msgid "Edit Product"
-msgstr ""
+msgstr "Editar Producto"
 
 #: app/templates/admin/edit_product.html:24
 msgid "Main Image"
-msgstr ""
+msgstr "Imagen principal"
 
 #: app/templates/admin/edit_product.html:131
 #: app/templates/admin/new_product.html:106
 #: app/templates/admin/product_users.html:19
 msgid "Back to products"
-msgstr ""
+msgstr "Regresar a productos"
 
 #: app/templates/admin/edit_product.html:134
 msgid "DELETE THIS PRODUCT"
-msgstr ""
+msgstr "ELIMINAR PRODUCTO"
 
 #: app/templates/admin/new_product.html:9 app/templates/admin/products.html:19
 msgid "New Product"
-msgstr ""
+msgstr "Nuevo producto"
 
 #: app/templates/admin/product_users.html:7
 msgid "Product Users Section:"
-msgstr ""
+msgstr "Sección usuarios productos"
 
 #: app/templates/admin/product_users.html:12
 msgid "User:"
-msgstr ""
+msgstr "Usuario:"
 
 #: app/templates/admin/product_users.html:14
 #: app/templates/admin/user_products.html:19
 msgid "Last ordered:"
-msgstr ""
+msgstr "Última orden"
 
 #: app/templates/admin/products.html:26
 msgid "Themed Boxes"
-msgstr ""
+msgstr "Gift boxes temáticas"
 
 #: app/templates/admin/products.html:36 app/templates/admin/products.html:66
 #: app/templates/admin/products.html:96
 msgid "Name:"
-msgstr ""
+msgstr "Nombre"
 
 #: app/templates/admin/products.html:37 app/templates/admin/products.html:67
 #: app/templates/admin/products.html:97
 msgid "Price:"
-msgstr ""
+msgstr "Precio"
 
 #: app/templates/admin/products.html:40
 msgid "Decription"
-msgstr ""
+msgstr "Descripción"
 
 #: app/templates/admin/products.html:42 app/templates/admin/products.html:72
 #: app/templates/admin/products.html:102
 msgid "user who bought"
-msgstr ""
+msgstr "Compradores"
 
 #: app/templates/admin/products.html:56
 msgid "Empty Boxes"
-msgstr ""
+msgstr "Cajas"
 
 #: app/templates/admin/products.html:69 app/templates/admin/products.html:99
 msgid "Category:"
-msgstr ""
+msgstr "Categoría:"
 
 #: app/templates/admin/products.html:70 app/templates/admin/products.html:100
 msgid "Decription:"
-msgstr ""
+msgstr "Descripción"
 
 #: app/templates/admin/products.html:86
 msgid "Individual Items"
-msgstr ""
+msgstr "ítems"
 
 #: app/templates/admin/reports.html:94
 msgid "Back to admin"
-msgstr ""
+msgstr "Regresar a admin"
 
 #: app/templates/admin/user_products.html:7
 msgid "User Products Section"
-msgstr ""
+msgstr "Sección Compradores"
 
 #: app/templates/admin/user_products.html:13
 msgid "Product: Deleted"
-msgstr ""
+msgstr "Producto: Eliminado"
 
 #: app/templates/admin/user_products.html:15
 msgid "Product:"
-msgstr ""
+msgstr "Producto"
 
 #: app/templates/admin/user_products.html:17
 msgid "Quantity bought:"
-msgstr ""
+msgstr "Cantidad comprada"
 
 #: app/templates/admin/user_products.html:25
 msgid "Back to users"
-msgstr ""
+msgstr "Volver a usuarios"
 
 #: app/templates/admin/users.html:20
 msgid "current status"
-msgstr ""
+msgstr "Estatus actual"
 
 #: app/templates/admin/users.html:22
 msgid "products bought by"
-msgstr ""
+msgstr "products bought by"
 
 #: app/templates/admin/users.html:26
 msgid "Set as admin"
-msgstr ""
+msgstr "Iniciar como admin"
 
 #: app/templates/admin/users.html:29
 msgid "Master Admin"
-msgstr ""
+msgstr "Master Admin"
 
 #: app/templates/admin/users.html:32
 msgid "Set as user"
-msgstr ""
+msgstr "Iniciar como usuario"
 
 #: app/templates/checkout/checkout.html:10
 #: app/templates/checkout/checkout_error.html:10
 msgid "Checkout"
-msgstr ""
+msgstr "Cerrar"
 
 #: app/templates/checkout/checkout.html:20
 msgid "Your order"
-msgstr ""
+msgstr "Orden"
 
 #: app/templates/checkout/checkout.html:25
 msgid "price"
-msgstr ""
+msgstr "Precio"
 
 #: app/templates/checkout/checkout.html:27
 #: app/templates/checkout/invoice.html:45
 #: app/templates/checkout/invoice_pdf.html:38
 #: app/templates/checkout/order_email.html:35
 msgid "Total"
-msgstr ""
+msgstr "Total"
 
 #: app/templates/checkout/checkout.html:28
 msgid "Update Total"
-msgstr ""
+msgstr "Total actualización"
 
 #: app/templates/checkout/checkout.html:124
 msgid "Enter your message for"
-msgstr ""
+msgstr "Ingresar mensaje"
 
 #: app/templates/checkout/checkout.html:146
 msgid "Choose which box you want"
-msgstr ""
+msgstr "Escoge una caja"
 
 #: app/templates/checkout/checkout.html:146
 msgid "to go in"
-msgstr ""
+msgstr "y que poner dentro"
 
 #: app/templates/checkout/checkout.html:192
 #: app/templates/checkout/checkout_error.html:13
 msgid "Continue Shopping"
-msgstr ""
+msgstr "Continuar comprando"
 
 #: app/templates/checkout/checkout_error.html:12
 msgid "Update Cart"
-msgstr ""
+msgstr "Actualizar Carrito"
 
 #: app/templates/checkout/invoice.html:10
 msgid "Thank you. Your order has been successful!"
-msgstr ""
+msgstr "Gracias. Su compra fue realizada con éxito"
 
 #: app/templates/checkout/invoice.html:11
 #: app/templates/checkout/invoice_pdf.html:4
 #: app/templates/checkout/order_email.html:1
 msgid "Dear"
-msgstr ""
+msgstr "Hola,"
 
 #: app/templates/checkout/invoice.html:12
 #: app/templates/checkout/invoice_pdf.html:5
 #: app/templates/checkout/order_email.html:2
 msgid "Your order of"
-msgstr ""
+msgstr "Tu orden de"
 
 #: app/templates/checkout/invoice.html:18
 #: app/templates/checkout/invoice_pdf.html:11
 #: app/templates/checkout/order_email.html:8
 msgid "at"
-msgstr ""
+msgstr "por"
 
 #: app/templates/checkout/invoice.html:18
 #: app/templates/checkout/invoice_pdf.html:11
 #: app/templates/checkout/order_email.html:8
 msgid "each"
-msgstr ""
+msgstr "cada"
 
 #: app/templates/checkout/invoice.html:23
 #: app/templates/checkout/invoice.html:26
@@ -533,99 +533,99 @@ msgstr ""
 #: app/templates/checkout/order_email.html:16
 #: app/templates/checkout/order_email.html:20
 msgid "will be attached to"
-msgstr ""
+msgstr "Atado a"
 
 #: app/templates/checkout/invoice.html:38
 #: app/templates/checkout/invoice_pdf.html:31
 #: app/templates/checkout/order_email.html:28
 msgid "will be placed in"
-msgstr ""
+msgstr "colocado en"
 
 #: app/templates/checkout/invoice.html:46
 #: app/templates/checkout/invoice_pdf.html:39
 #: app/templates/checkout/order_email.html:36
 msgid "Will be delivered to"
-msgstr ""
+msgstr "Será envíado a"
 
 #: app/templates/checkout/invoice.html:62
 #: app/templates/checkout/invoice_pdf.html:55
 #: app/templates/checkout/order_email.html:52
 msgid "With the special instructions"
-msgstr ""
+msgstr "Instrucciones especiales"
 
 #: app/templates/checkout/invoice.html:67
 #: app/templates/checkout/invoice_pdf.html:60
 #: app/templates/checkout/order_email.html:57
 msgid "Thank you for your order"
-msgstr ""
+msgstr "Gracias por su orden"
 
 #: app/templates/checkout/invoice.html:68
 #: app/templates/checkout/invoice_pdf.html:61
 #: app/templates/checkout/order_email.html:58
 msgid "Sincerely"
-msgstr ""
+msgstr "Atentamente"
 
 #: app/templates/errors/404.html:11
 msgid "File Not Found"
-msgstr ""
+msgstr "File not Found"
 
 #: app/templates/errors/500.html:11
 msgid "An unexpected error has occurred"
-msgstr ""
+msgstr "An unexpected error has occurred"
 
 #: app/templates/errors/500.html:12
 msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr ""
+msgstr "The administrator has been notified. Sorry for the inconvenience!"
 
 #: app/templates/shop/index.html:19
 msgid "Detalles especiales,"
-msgstr ""
+msgstr "Detalles especiales,"
 
 #: app/templates/shop/index.html:20
 msgid "para personas extraordinarias"
-msgstr ""
+msgstr "para personas extraordinarias"
 
 #: app/templates/shop/index.html:22
 msgid "Arma tu"
-msgstr ""
+msgstr "Arma tu"
 
 #: app/templates/shop/index.html:38
 msgid "¿Cómo comprar?"
-msgstr ""
+msgstr "¿Cómo comprar?"
 
 #: app/templates/shop/index.html:49
 msgid "Escoge entre nuestra selección de Gift Boxes."
-msgstr ""
+msgstr ""Escoge entre nuestra selección de Gift Boxes."
 
 #: app/templates/shop/index.html:53
 msgid "Agrega tu nombre y mensaje a la tarjeta."
-msgstr ""
+msgstr "Agrega tu nombre y mensaje a la tarjeta."
 
 #: app/templates/shop/index.html:57
 msgid "Envíos a todo Panamá."
-msgstr ""
+msgstr "Envíos a todo Panamá."
 
 #: app/templates/shop/index.html:79
 msgid "Nuestras Gift Boxes prediseñadas"
-msgstr ""
+msgstr "Nuestras Gift Boxes prediseñadas"
 
 #: app/templates/shop/index.html:140
 msgid "Personalizadas"
-msgstr ""
+msgstr "Personalizadas"
 
 #: app/templates/shop/index.html:151
 msgid "Escoge"
-msgstr ""
+msgstr "Escoge"
 
 #: app/templates/shop/index.html:155
 msgid "Agrega"
-msgstr ""
+msgstr "Agrega"
 
 #: app/templates/shop/index.html:159
 msgid "Identifica"
-msgstr ""
+msgstr "Identifica"
 
 #: app/templates/shop/index.html:163
 msgid "Envía"
-msgstr ""
+msgstr "Envía"
 
