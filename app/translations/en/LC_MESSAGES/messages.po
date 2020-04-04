@@ -254,35 +254,35 @@ msgstr ""
 
 #: app/templates/contact_section.html:12
 msgid "Contactanos"
-msgstr ""
+msgstr "Contact us"
 
 #: app/templates/footer_section.html:12 app/templates/nav_section.html:22
 msgid "Contacto"
-msgstr ""
+msgstr "Contact"
 
 #: app/templates/footer_section.html:18
 msgid "Siguenos"
-msgstr ""
+msgstr "Follow us"
 
 #: app/templates/footer_section.html:28
 msgid "Dirección"
-msgstr ""
+msgstr "Address"
 
 #: app/templates/footer_section.html:30
 msgid "Panamá, Panamá"
-msgstr ""
+msgstr "Panamá, Panamá"
 
 #: app/templates/nav_section.html:12
 msgid "Inicio"
-msgstr ""
+msgstr "Home"
 
 #: app/templates/nav_section.html:15
 msgid "Quiénes somos"
-msgstr ""
+msgstr "About us"
 
 #: app/templates/nav_section.html:18
 msgid "Productos"
-msgstr ""
+msgstr "Products"
 
 #: app/templates/nav_section.html:28
 msgid "Sign in"
@@ -579,53 +579,52 @@ msgstr ""
 
 #: app/templates/shop/index.html:19
 msgid "Detalles especiales,"
-msgstr ""
+msgstr "Something special"
 
 #: app/templates/shop/index.html:20
 msgid "para personas extraordinarias"
-msgstr ""
+msgstr "for that special someone"
 
 #: app/templates/shop/index.html:22
 msgid "Arma tu"
-msgstr ""
+msgstr "Make your own"
 
 #: app/templates/shop/index.html:38
 msgid "¿Cómo comprar?"
-msgstr ""
+msgstr "How to buy?"
 
 #: app/templates/shop/index.html:49
 msgid "Escoge entre nuestra selección de Gift Boxes."
-msgstr ""
+msgstr "Choose from our selection of themed Gift Boxes"
 
 #: app/templates/shop/index.html:53
 msgid "Agrega tu nombre y mensaje a la tarjeta."
-msgstr ""
+msgstr "Add your nanme and message to the card."
 
 #: app/templates/shop/index.html:57
 msgid "Envíos a todo Panamá."
-msgstr ""
+msgstr "We deliver across the whole of Panamá"
 
 #: app/templates/shop/index.html:79
 msgid "Nuestras Gift Boxes prediseñadas"
-msgstr ""
+msgstr "Our Gift Boxes themed"
 
 #: app/templates/shop/index.html:140
 msgid "Personalizadas"
-msgstr ""
+msgstr "Personalized"
 
 #: app/templates/shop/index.html:151
 msgid "Escoge"
-msgstr ""
+msgstr "Choose"
 
 #: app/templates/shop/index.html:155
 msgid "Agrega"
-msgstr ""
+msgstr "Add"
 
 #: app/templates/shop/index.html:159
 msgid "Identifica"
-msgstr ""
+msgstr "Enter the recipients name"
 
 #: app/templates/shop/index.html:163
 msgid "Envía"
-msgstr ""
-
+msgstr "Send"
