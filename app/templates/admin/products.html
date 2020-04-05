@@ -37,7 +37,8 @@
                                 <p class="card-text">{{ _('Price:') }} ${{'%0.2f'| format(product.price|float)}}</p>
                                 <p>{{ _('Quantity:') }} {{ product.qty }}</p>
                                 <p>{{ _('Category') }}: {{ product.cat }}</p>
-                                <p>{{ _('Decription') }}: {{ product.description }}</p>
+                                <p>{{ _('Decription Espanol') }}: {{ product.description }}</p>
+                                <p>{{ _('English Description') }}: {{ product.en_description }}</p>
                                 <a href="{{ url_for('admin.product_users', product_id=product.id)}}">
                                     <button type="button" class="btn btn-primary">{{ _('user who bought') }} {{ product.item }}</button>
                                 </a>

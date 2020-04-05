@@ -6,6 +6,8 @@ from flask import(
     current_app
     )
 
+from flask_babel import get_locale
+
 from app.models import Product
 
 
@@ -68,6 +70,10 @@ def organise_products():
     product_dict = {"Box": [], "Item": [], "Empty Box": []}
     for product in Product.query.all():
         if product.qty > 0:
+            if str(get_locale()) == "es":
+                description = product.description
+            else:
+                description = product.en_description
             product_dict[product.cat].append(
                     [
                     product.id,
@@ -76,7 +82,7 @@ def organise_products():
                     product.image_file,
                     product.price,
                     product.qty,
-                    product.description,
+                    description,
                     product.back_image_file
                     ]
                 ) 

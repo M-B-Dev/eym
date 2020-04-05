@@ -65,7 +65,11 @@
 <div class="jumbotron">
 <div class="container">
 <div class="row text-center padding">
+	{% if lang == "es" %}
 	<h1>{{ about[0].body }}</h1>
+	{% else %}
+	<h1>{{ about[0].en_body }}</h1>
+	{% endif %}
 </div>
 </div>
 </div>

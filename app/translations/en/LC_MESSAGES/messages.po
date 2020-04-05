@@ -579,7 +579,7 @@ msgstr ""
 
 #: app/templates/shop/index.html:19
 msgid "Detalles especiales,"
-msgstr "Something special"
+msgstr "A little something"
 
 #: app/templates/shop/index.html:20
 msgid "para personas extraordinarias"
@@ -591,7 +591,7 @@ msgstr "Make your own"
 
 #: app/templates/shop/index.html:38
 msgid "¿Cómo comprar?"
-msgstr "How to buy?"
+msgstr "How to order"
 
 #: app/templates/shop/index.html:49
 msgid "Escoge entre nuestra selección de Gift Boxes."
@@ -599,19 +599,19 @@ msgstr "Choose from our selection of themed Gift Boxes"
 
 #: app/templates/shop/index.html:53
 msgid "Agrega tu nombre y mensaje a la tarjeta."
-msgstr "Add your nanme and message to the card."
+msgstr "Add your name and message to the card"
 
 #: app/templates/shop/index.html:57
 msgid "Envíos a todo Panamá."
-msgstr "We deliver across the whole of Panamá"
+msgstr "We deliver to the whole of Panamá"
 
 #: app/templates/shop/index.html:79
 msgid "Nuestras Gift Boxes prediseñadas"
-msgstr "Our Gift Boxes themed"
+msgstr "Gift Boxes - themed"
 
 #: app/templates/shop/index.html:140
 msgid "Personalizadas"
-msgstr "Personalized"
+msgstr "- Personalized"
 
 #: app/templates/shop/index.html:151
 msgid "Escoge"

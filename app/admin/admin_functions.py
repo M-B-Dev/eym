@@ -28,6 +28,8 @@ def get_edit_product_form(form, product):
     form.cat.data = product.cat
     form.description.data = product.description
     form.image_file.data = product.image_file
+    if form.en_description.data:
+        form.en_description.data = product.en_description.data
     return form
 
 
@@ -46,6 +48,7 @@ def post_edit_product_form(form, product):
     product.qty = form.qty.data
     product.cat = form.cat.data
     product.description = form.description.data
+    product.en_description = form.en_description.data
     product.price = form.price.data
     db.session.commit()
     flash(_('Your changes have been saved.'))

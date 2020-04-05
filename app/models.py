@@ -40,6 +40,7 @@ class About(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     body = db.Column(db.String(140))
+    en_body = db.Column(db.String(140), nullable=True)
 
     def __repr__(self):
         return '{}'.format(self.body)
@@ -200,6 +201,7 @@ class Product(db.Model):
         )
     price = db.Column(db.Integer)
     description = db.Column(db.String(128), nullable=True)
+    en_description = db.Column(db.String(128), nullable=True)
     orders = db.relationship('Order', backref='product', lazy='dynamic')
         
     def __repr__(self):
