@@ -15,6 +15,8 @@ from flask import(
 
 from flask_login import current_user, login_required
 
+from flask_babel import get_locale
+
 from app.models import Product, Order, About
 
 from app import db
@@ -68,7 +70,8 @@ def index():
         feedback(form.message.data, form.email.data)
         return redirect(url_for('shop.index')+'#contacto')
     return render_template(
-        'shop/index.html', 
+        'shop/index.html',
+        lang=str(get_locale()), 
         about=About.query.all(), 
         items=session['items'], 
         total_products=session['total_products'], 

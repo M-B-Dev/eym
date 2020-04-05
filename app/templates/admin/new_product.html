@@ -76,6 +76,19 @@
                             {% endif %}
                         </div>
                         <div class="form-group">
+                            {{ form.en_description.label(class="form-control-label") }}
+                            {% if form.en_description.errors %}
+                                {{ form.en_description(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.en_description.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.en_description(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <div class="form-group">
                             {{ form.image_file.label(class="form-control-label") }}
                             {% if form.image_file.errors %}
                                 {{ form.image_file(class="form-control form-control-lg is-invalid") }}

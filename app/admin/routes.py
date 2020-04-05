@@ -1,6 +1,6 @@
 from flask_login import login_required, current_user
 
-from flask_babel import _
+from flask_babel import _, get_locale
 
 from flask import( 
     render_template, 
@@ -47,13 +47,15 @@ def admin():
     form = EditAboutForm()
     if form.validate_on_submit():
         about.body = form.body.data
+        about.en_body = form.en_body.data
         db.session.commit()
         flash(_('Your changes have been saved.'))
         return redirect(url_for('admin.admin'))
     elif request.method == 'GET':
-        form.body.data = about.body       
+        form.body.data = about.body
+        form.en_body.data = about.en_body       
     return render_template(
-        'admin/admin.html', 
+        'admin/admin.html',
         title='Admin', 
         form=form, 
         about=about, 
@@ -109,7 +111,8 @@ def new_product():
             qty=form.qty.data, 
             description=form.description.data, 
             cat=form.cat.data, 
-            price=form.price.data
+            price=form.price.data, 
+            en_description=form.en_description.data
             )
         db.session.add(product)
         db.session.commit()

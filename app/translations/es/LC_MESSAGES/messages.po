@@ -628,4 +628,3 @@ msgstr "Identifica"
 #: app/templates/shop/index.html:163
 msgid "Envía"
 msgstr "Envía"
-

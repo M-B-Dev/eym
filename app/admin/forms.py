@@ -54,6 +54,7 @@ class ReportForm(FlaskForm):
 class EditAboutForm(FlaskForm):
     """About section form."""
     body = TextAreaField()
+    en_body = TextAreaField()
     submit = SubmitField(_l('Edit'))
 
 
@@ -67,7 +68,8 @@ class NewProductForm(FlaskForm):
         validators=[DataRequired()], 
         choices=[("Empty Box", "Empty Box"), ("Item", "Item"), ("Box", "Box")]
         )
-    description = StringField(_l('Description'))
+    description = StringField(_l('Description'), validators=[DataRequired()])
+    en_description = StringField(_l('English Description'), validators=[DataRequired()])
     image_file = FileField(
         _l('Product Image'), 
         validators=[FileAllowed(['jpg', 'png', 'jpeg'])]
