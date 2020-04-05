@@ -3,6 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
 
+#sign, #sign:hover {
+  text-decoration: none !important;
+  color: #576475 !important;
+}
+
 #front {
   height: auto !important;
 }
