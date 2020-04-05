@@ -1,11 +1,24 @@
+function resize1() {
+  var elementHeight = document.getElementById('front').offsetHeight;
+  var heightElements = document.getElementsByClassName('card-header');
+
+
+
+  for(i = 0; i < heightElements.length; i++) {
+    heightElements[i].style.height = `${elementHeight}px`;
+    
+  }
+
+}
+
 
 function resize2() {
   var element = document.getElementById('width').offsetWidth;
-  console.log(element)
+  // console.log(element)
   var newWidth = element/2;
   var el = document.getElementsByClassName('poster');
   var inf = document.getElementsByClassName('info');
-  console.log(getComputedStyle(el[0]).getPropertyValue("-webkit-transform"))
+  // console.log(getComputedStyle(el[0]).getPropertyValue("-webkit-transform"))
   for(i = 0; i < el.length; i++) {
     el[i].style.webkitTransform = `translateZ(${newWidth}px)`;
     el[i].style.mozTransform = `translateZ(${newWidth}px)`;
@@ -14,7 +27,7 @@ function resize2() {
     inf[i].style.mozTransform = `rotateY(90deg) translateZ(${newWidth}px)`;
     inf[i].style.transform = `rotateY(90deg) translateZ(${newWidth}px)`;
   }
-  console.log(getComputedStyle(el[0]).getPropertyValue("-webkit-transform"))
+  // console.log(getComputedStyle(el[0]).getPropertyValue("-webkit-transform"))
   }
 
 // inifinte scroller
@@ -54,6 +67,7 @@ function loadItemsGifts() {
       }
       inprogressGift = false;
       resize2();
+      resize1();
     })  
    
   })
@@ -99,6 +113,7 @@ function loadItemsItems() {
       }
       inprogressItem = false;
       resize2();
+      resize1();
     })  
   })
 }
@@ -139,6 +154,7 @@ function loadItemsBoxes() {
       }
       inprogressBox = false;
       resize2();
+      resize1();
     })  
   })
 }

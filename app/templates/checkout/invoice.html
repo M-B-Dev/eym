@@ -68,8 +68,8 @@
             <p>{{ _('Sincerely') }},</p>
             <p>E & M</p>
 
-            <p><a href="{{ url_for('checkout.invoice_pdf')}}" target="_blank"><button type="button" class="btn btn-warning">Download Invoice</button></a></p>
-            <a href="{{ url_for('shop.clear_session')}}"><button type="button" class="btn btn-primary">Continue Shopping</button></a>
+            <p><a href="{{ url_for('checkout.invoice_pdf')}}" target="_blank"><button type="button" class="btn btn-warning">{{ _('Download Invoice') }}</button></a></p>
+            <a href="{{ url_for('shop.clear_session')}}"><button type="button" class="btn btn-primary">{{ _('Continue Shopping')  }}</button></a>
         </div>
     </div>
 </div>        

@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Overpass&display=swap');
 
+#front {
+  height: auto !important;
+}
+
 html, body {
   height: 100%;
   font-family: "Questrial", sans-serif;

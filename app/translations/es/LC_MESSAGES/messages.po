@@ -565,6 +565,14 @@ msgstr "Gracias por su orden"
 msgid "Sincerely"
 msgstr "Atentamente"
 
+#: app/templates/checkout/invoice_pdf.html:71
+msgid "Download Invoice"
+msgstr "Descarga Factura"
+
+#: app/templates/checkout/invoice_pdf.html:72
+msgid "Continue Shopping"
+msgstr "Continua Comprando"
+
 #: app/templates/errors/404.html:11
 msgid "File Not Found"
 msgstr "File not Found"

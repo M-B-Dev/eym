@@ -58,6 +58,7 @@ Transform and style the two planes
 	transform: translateZ(175px);
 
 	width: 90%;
+	height: auto;
 	background-repeat: no-repeat;
 }
 

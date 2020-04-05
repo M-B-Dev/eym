@@ -25,6 +25,16 @@
 
 // update cart
 function updateCart(data) {
+  if (data.lang == "es") {
+    price = "Precio";
+    qty = "Candidad";
+    clear = "Vaciar Carrito";
+  } 
+  else {
+    price = "Price";
+    qty = "Quantity";
+    clear = "Clear Cart";
+  }
     $('.item-total').html(
       (Math.round(data.total * 100) / 100).toFixed(2)
       );
@@ -46,8 +56,8 @@ function updateCart(data) {
           <img src="static/img-cart/` + data.items[i][2] + `" class="img-fluid rounded-circle" id="item-img" alt="">
           <div class="item-text">
             <p id="cart-item-title" class="font-weight-bold mb-0">` + data.items[i][1] + `</p>
-            <span id="cart-item-price" class="cart-item-price" class="mb-0">Price: ` + (Math.round(data.items[i][0] * 100) / 100).toFixed(2) + ` | </span>
-            <span id="cart-item-price" class="cart-item-price" class="mb-0">Quantity:` + data.items[i][4] + `</span>
+            <span id="cart-item-price" class="cart-item-price" class="mb-0">${price}: ` + (Math.round(data.items[i][0] * 100) / 100).toFixed(2) + ` | </span>
+            <span id="cart-item-price" class="cart-item-price" class="mb-0">${qty}:` + data.items[i][4] + `</span>
           </div>
           <a href="#" id='trash-` + i + `' class="cart-item-remove">
           <i class="fas fa-trash"></i>
@@ -74,7 +84,7 @@ function updateCart(data) {
           `</strong> </h4>
         </div>
         <div class="row padding" class="store-items" id="store">
-          <a href="index/clear" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">clear cart</a>
+          <a href="index/clear" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase">${clear}</a>
           <a href="/checkout" class="btn btn-outline-secondary text-uppercase btn-pink">Checkout</a>
 
         </div>`
