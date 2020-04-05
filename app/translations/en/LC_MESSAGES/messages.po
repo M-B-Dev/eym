@@ -615,11 +615,11 @@ msgstr "- Personalized"
 
 #: app/templates/shop/index.html:151
 msgid "Escoge"
-msgstr "Choose"
+msgstr "Choose an empty box"
 
 #: app/templates/shop/index.html:155
 msgid "Agrega"
-msgstr "Add"
+msgstr "Add items"
 
 #: app/templates/shop/index.html:159
 msgid "Identifica"
