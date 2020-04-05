@@ -122,5 +122,6 @@ def update_cart():
     return jsonify(
         total=session['total'], 
         total_products=session['total_products'], 
-        items=session['items']
+        items=session['items'],
+        lang=str(get_locale())
         )

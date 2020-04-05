@@ -17,7 +17,7 @@
             {% endwith %}
             <form action="" method="post" enctype="multipart/form-data">
                 {{ form.hidden_tag() }}
-                <h3>{{ _('Your order') }}: </h3>
+                <h2>{{ _('Your order') }}: </h2>
                 {% for item in user_order %}
                     {% if item[4] %} 
                         <div class='alert alert-danger'>{{item[4]}}</div>
