@@ -65,7 +65,7 @@ msgstr "Cambios guardados"
 
 #: app/admin/forms.py:31
 msgid "Please enter a message"
-msgstr ""
+msgstr "Por favor ingrese el mensaje"
 
 #: app/admin/forms.py:33 app/admin/forms.py:34
 msgid "Please enter your email address."
@@ -94,11 +94,11 @@ msgstr "Producto"
 
 #: app/admin/forms.py:63
 msgid "Please enter the product name"
-msgstr ""
+msgstr "Por favor ingrese el nombre del producto"
 
 #: app/admin/forms.py:64
 msgid "Please enter the quantity of the product as a whole number"
-msgstr ""
+msgstr "Por favor ingrese la cantidad del producto en número"
 
 #: app/admin/forms.py:64
 msgid "Price"
@@ -106,15 +106,15 @@ msgstr "Precio"
 
 #: app/admin/forms.py:65
 msgid "Please enter the price of the product"
-msgstr ""
+msgstr "Por favor ingrese el precio del producto"
 
 #: app/admin/forms.py:66 app/templates/admin/products.html:39
 msgid "Category"
-msgstr "Categoria"
+msgstr "Categoría"
 
 #: app/admin/forms.py:68
 msgid "Please choose either box, item or empty box"
-msgstr ""
+msgstr "Por favor escoja entre caja, ítem o caja vacía"
 
 #: app/admin/forms.py:70
 msgid "Description"
@@ -122,11 +122,11 @@ msgstr "Descripción"
 
 #: app/admin/forms.py:71
 msgid "Please enter a description in Spanish"
-msgstr ""
+msgstr "Por favor ingrese descripción en español"
 
 #: app/admin/forms.py:72
 msgid "Please enter a description in English"
-msgstr ""
+msgstr "Por favor ingrese descripción en inglés"
 
 #: app/admin/forms.py:72
 msgid "Product Image"
@@ -240,7 +240,7 @@ msgstr "Nombre"
 
 #: app/checkout/forms.py:42 app/templates/admin/users.html:18
 msgid "Please provide a recipient name. Your card has not been charged"
-msgstr ""
+msgstr "Por favor indique el nombre del receptor. Cargo no realizado a la tarjeta"
 
 #: app/checkout/forms.py:44
 msgid "Address Line 1"
@@ -248,7 +248,7 @@ msgstr "Dirección 1"
 
 #: app/checkout/forms.py:45
 msgid "Please provide the first line of the address. Your card has not been charged"
-msgstr ""
+msgstr "Por favor indique la dirección correcta. Cargo no realizado a la tarjeta "
 
 #: app/checkout/forms.py:47
 msgid "Address Line 2"
@@ -264,7 +264,7 @@ msgstr "Ciudad"
 
 #: app/checkout/forms.py:49
 msgid "Please provide a town or city. Your card has not been charged"
-msgstr ""
+msgstr "Por favor indicar una Ciudad. Cargo no realizado a la tarjeta"
 
 #: app/checkout/forms.py:50
 msgid "State"
@@ -272,7 +272,7 @@ msgstr "Provincia"
 
 #: app/checkout/forms.py:50
 msgid "Please provide the province, county or state. Your card has not been charged"
-msgstr ""
+msgstr "Por favor indicar Provincia. Cargo no realizado a la tarjeta"
 
 #: app/checkout/forms.py:52
 msgid "Postal/Zip Code"
@@ -280,7 +280,7 @@ msgstr "Código Postal"
 
 #: app/checkout/forms.py:53
 msgid "Please provide the postal/zip. Your card has not been charged"
-msgstr ""
+msgstr "Por favor indicar código postal. Cargo no realizado a la tarjeta "
 
 #: app/checkout/forms.py:55
 msgid "Instructions"
