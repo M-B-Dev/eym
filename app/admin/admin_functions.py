@@ -113,5 +113,5 @@ def check_category(image_data, cat_data, back_image_data):
 
 def user_check():
     """checks if the user is admin or not"""
-    if current_user.status == 'user':
+    if current_user.status == 'user' or current_user.email != "eymcreativa@gmail.com":
         return redirect(url_for('shop.index'))

@@ -52,8 +52,9 @@ def admin():
         flash(_('Your changes have been saved.'))
         return redirect(url_for('admin.admin'))
     elif request.method == 'GET':
-        form.body.data = about.body
-        form.en_body.data = about.en_body       
+        if about:
+            form.body.data = about.body
+            form.en_body.data = about.en_body       
     return render_template(
         'admin/admin.html',
         title='Admin', 

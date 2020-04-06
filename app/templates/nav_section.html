@@ -36,7 +36,7 @@
 					<li class="nav-item">	
 						<a class="nav-link" href="{{url_for('auth.logout')}}">{{ _('Log out') }}</a>
 					</li>
-					{% if current_user.status != "user" %}
+					{% if current_user.status != "user" or current_user.email == "eymcreativa@gmail.com"%}
 						<li class="nav-item">
 							<a class="nav-link" href="{{url_for('admin.admin')}}">{{ _('admin') }}</a>
 						</li>
