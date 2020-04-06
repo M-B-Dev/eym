@@ -24,6 +24,8 @@ from app.auth import bp
 
 from app.models import User
 
+from app import db
+
 
 @bp.route('/login')
 def login():
