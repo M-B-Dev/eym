@@ -12,8 +12,6 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 from rq import get_current_job
 
-from flask_babel import _
-
 from app import db
 
 from app.models import Task, Order
@@ -73,8 +71,8 @@ def export_report(users, products, to, frm):
             complete = generate_async_report(users, products, to, frm)
         _set_task_progress(100, complete)
     except Exception:
-        _set_task_progress(100, _("Error when exporting"))
-        app.logger.error(_('Unhandled exception'), exc_info=sys.exc_info())
+        _set_task_progress(100, "Error when exporting")
+        app.logger.error('Unhandled exception', exc_info=sys.exc_info())
 
 
 def generate_async_report(users, products, to, frm):
@@ -94,13 +92,13 @@ def generate_async_report(users, products, to, frm):
         )
     client = gspread.authorize(creds)
     sheet = client.create(
-        _("Report Results %(date)", date=datetime.utcnow().strftime('%d-%m-%y-%H-%-M'))
+        f"Report Results {datetime.utcnow().strftime('%d-%m-%y-%H-%-M')}"
         )
     worksheet = sheet.sheet1
-    worksheet.update_cell(1, 1, _("Email"))
-    worksheet.update_cell(1, 2, _("Product"))
-    worksheet.update_cell(1, 3, _("Date"))
-    worksheet.update_cell(1, 4, _("Quantity"))
+    worksheet.update_cell(1, 1, "Email")
+    worksheet.update_cell(1, 2, "Product")
+    worksheet.update_cell(1, 3, "Date")
+    worksheet.update_cell(1, 4, "Quantity")
     row = 1
     for i, user in enumerate(users):
         for product in products:
@@ -138,9 +136,9 @@ def generate_async_report(users, products, to, frm):
             perm_type='user', 
             role='writer'
             )
-        return _("Export complete")
+        return "Export complete"
     else:
-        return _("No results")
+        return "No results"
 
 
 def sheet_update(row, buyer, product, timestamp, qty, worksheet, sheet):
