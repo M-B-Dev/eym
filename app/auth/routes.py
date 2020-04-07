@@ -30,6 +30,9 @@ from app import db
 @bp.route('/login')
 def login():
     """This initiates the google log in process."""
+    url = request.base_url
+    if url[4] != "s":
+        url = "https" + url[4:]
     client = WebApplicationClient(current_app.config['GOOGLE_CLIENT_ID'])
     google_provider_cfg = get_google_provider_cfg()
     authorization_endpoint = google_provider_cfg[
@@ -58,9 +61,15 @@ def callback():
     code = request.args.get("code")
     google_provider_cfg = get_google_provider_cfg()
     token_endpoint = google_provider_cfg["token_endpoint"]
+    print(request.base_url)
+    print(code)
+    print(request.url)
+    if request.url[4] == 's':
+        url = "https" + request.url[5:]
+        print(url)
     token_url, headers, body = client.prepare_token_request(
         token_endpoint,
-        authorization_response=request.url,
+        authorization_response=url,
         redirect_url=request.base_url,
         code=code
         )

@@ -1,2 +1,5 @@
 *.pyc
 *.flaskenv
+/venv/*
+*.db
+/migrations/*
