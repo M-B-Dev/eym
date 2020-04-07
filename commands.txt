@@ -9,3 +9,7 @@ ctrl + c //stop server//
 git add .
 git commit -m "<name of commit>"
 git push origin  <name of branch>
+
+Choose between our selection of themed Gift Boxes. Add your number and message to the card. We will deliver your personalized gift box directly to your special someone.
+
+Escoge entre nuestra selección de Gift Boxes temáticas. Agrega tu nombre y mensaje a la tarjeta. Nosotros nos encargamos de que llegue directamente a sus manos.
