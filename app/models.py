@@ -39,8 +39,8 @@ class About(db.Model):
     """This stores the about us text."""
 
     id = db.Column(db.Integer, primary_key=True)
-    body = db.Column(db.String(140))
-    en_body = db.Column(db.String(140), nullable=True)
+    body = db.Column(db.String(1000))
+    en_body = db.Column(db.String(1000), nullable=True)
 
     def __repr__(self):
         return '{}'.format(self.body)
