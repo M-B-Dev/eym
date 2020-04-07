@@ -46,8 +46,13 @@ def admin():
     about = About.query.filter_by().first()
     form = EditAboutForm()
     if form.validate_on_submit():
-        about.body = form.body.data
-        about.en_body = form.en_body.data
+        if about:
+            print(about.body)
+            about.body = form.body.data
+            about.en_body = form.en_body.data
+        else:
+            about = About(body=form.body.data, en_body=form.en_body.data)
+            db.session.add(about)
         db.session.commit()
         flash(_('Your changes have been saved.'))
         return redirect(url_for('admin.admin'))

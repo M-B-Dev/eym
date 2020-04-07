@@ -26,7 +26,8 @@ def get_edit_product_form(form, product):
     form.qty.data = product.qty
     form.price.data = product.price
     form.cat.data = product.cat
-    form.description.data = product.description
+    if form.description.data:
+        form.description.data = product.description
     form.image_file.data = product.image_file
     if form.en_description.data:
         form.en_description.data = product.en_description.data
